@@ -268,7 +268,7 @@ Error/Alternative Cases — If the information from a previous search is outdate
 
 **2.1 Class Diagram and Design Patterns**
 
-\-attached as a .uxf file in the repo
+\-attached as a .uxf file in the repo: data\stage1\diagrams
 
 <img width="3320" height="2530" alt="Image" src="https://github.com/user-attachments/assets/a65aa75b-8a51-499a-80f2-18893e1c874d" />
 
@@ -398,7 +398,9 @@ Each interface would call several subsystem classes in the right order, so both 
 
 **2.2 Use Case Diagrams and Use Case Descriptions**
 
-\-.uxf file attached for the use case diagram in the repo
+\-.uxf file attached for the use case diagram in the repo: data\stage1\diagrams
+
+<img width="870" height="630" alt="Image" src="https://github.com/user-attachments/assets/2d708cd3-7e6b-47f7-9b92-ab274ace33e5" />
 
 * ***Use case ID: UC01***  
   Use Case Name: Search Restaurants( natural language)  
@@ -578,21 +580,29 @@ Each interface would call several subsystem classes in the right order, so both 
 
 **2.3 Sequence Diagrams**
 
-\-.uxf files are attached to the repo 
+\-.uxf files are attached to the repo: data\stage1\diagrams
 
 **For Reference:**
 
 *SD01: Search with Clarification*  
 It shows usage of Use Cases UC01 UC02 and Features F01 F02 F03 F04 F05 F06 F07.
 
+-- some glitch with the png export for SD01
+
 *SD02: Refine Search*  
 It shows usage of Use Case UC03 and Feature F09.
+
+<img width="3200" height="1710" alt="Image" src="https://github.com/user-attachments/assets/c43bc551-565b-4160-a8ea-191e511de3a8" />
 
 *SD03: Map, Details, Freshness, Explanation*  
 It shows usage of Use Cases UC04 UC05 and Features F08 F10 F11.
 
+<img width="2120" height="2350" alt="Image" src="https://github.com/user-attachments/assets/c57e7523-2b52-404f-9d0a-a682bc9dfed9" />
+
 *SD04: Search History and Refresh*  
 It shows usage of Use Case UC06 and Feature F12.
+
+<img width="2480" height="2250" alt="Image" src="https://github.com/user-attachments/assets/bcf2039a-3e2b-4e6b-8586-d2eb28129d00" />
 
 **3.0  Feature-to-Design Traceability**
 
