@@ -270,6 +270,8 @@ Error/Alternative Cases — If the information from a previous search is outdate
 
 \-attached as a .uxf file in the repo
 
+<img width="3320" height="2530" alt="Image" src="https://github.com/user-attachments/assets/a65aa75b-8a51-499a-80f2-18893e1c874d" />
+
 ***Five meaningful design patterns:***
 
 1. **MVC**  
