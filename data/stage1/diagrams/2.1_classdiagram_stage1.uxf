@@ -1,0 +1,284 @@
+<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>72</x><y>0</y><w>174</w><h>150</h></coordinates><panel_attributes>MainWindow
+--
+-SearchPanel searchPanel
+-ResultsPanel resultsPanel
+-AgentController controller
+--
++show(): void
++onSearchClicked: void
++onAnswerClicked: void
++onRefineClicked: void
++onResultSelected(String restaurantId): void
++onWhyThisClicked(String restaurantId): void
++onHistoryOpened(): void
++onHistoryItemSelected(int index): void
++onRefreshClicked(): void
++handleResponse(AgentResponse response): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>66</x><y>144</y><w>54</w><h>114</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;10;70;110;10;110;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>144</y><w>66</w><h>102</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100;90;100;90;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>234</y><w>174</w><h>78</h></coordinates><panel_attributes>ResultsPanel
+--
+
+--
++displayResults(List &lt;SearchResult&gt; results): void
++showMap(List &lt;SearchResult&gt; results): void
++showDetails(SearchResult result): void
++showExplanation(String text): void
++showNotice(String message): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>18</x><y>246</y><w>150</w><h>60</h></coordinates><panel_attributes>SearchPanel
+--
+
+--
++getUserInput(): String
++displayClarification(String question): void
++clear():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>144</y><w>228</w><h>174</h></coordinates><panel_attributes>lt=-&gt;
+
+uses</panel_attributes><additional_attributes>10;10;10;70;360;70;360;270</additional_attributes></element><element><id>UMLClass</id><coordinates><x>396</x><y>306</y><w>174</w><h>162</h></coordinates><panel_attributes>&lt;&lt;facade and controller&gt;&gt;
+AgentController
+--
+-RestaurantAgent agent
+-HistoryService historyService
+-SearchConstraints currentConstraints
+-List&lt;SearchResult&gt; currentResults
+-String originalQuery
+--
++submitRequest(String text): AgentResponse
++answerClarification(String text): AgentResponse
++refineSearch(String text): AgentResponse
++refreshSearch(): AgentResponse
++getResult(String restaurantId): SearchResult
++getExplanation(String restaurantId): String
++getHistory(): List&lt;SearchHistory&gt;
++reopenSearch(int index): AgentResponse
+-saveCurrentSearch(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>30</y><w>180</w><h>66</h></coordinates><panel_attributes>CliApp
+--
+-AgentController controller
+--
++run() void
++handleInput(String line) void
++displayResponse(AgentResponse response) void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>498</x><y>90</y><w>30</w><h>228</h></coordinates><panel_attributes>lt=&lt;-
+
+uses</panel_attributes><additional_attributes>10;360;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>462</y><w>30</w><h>84</h></coordinates><panel_attributes>lt=&lt;-
+m1=1..1</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>408</x><y>534</y><w>156</w><h>90</h></coordinates><panel_attributes>HistoryService
+--
+-Path historyFile
+-int outdatedAfterDays
+--
++saveSearch(SearchHistory entry) void
++getHistory() List&lt;SearchHistory&gt;
++loadSearch(int index) SearchHistory
++isOutdated(SearchHistory entry) boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>246</x><y>462</y><w>186</w><h>270</h></coordinates><panel_attributes>lt=&lt;.
+
+
+
+returns </panel_attributes><additional_attributes>10;430;10;80;290;80;290;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>192</x><y>720</y><w>126</w><h>66</h></coordinates><panel_attributes>AgentResponse
+--
+-ResponseType type
+-String message
+-SearchConstraints constraints
+-List&lt;SearchResult&gt; results
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>402</x><y>726</y><w>126</w><h>78</h></coordinates><panel_attributes>SearchHistory
+--
+-String originalQuery
+-SearchConstraints constraints
+-List&lt;SearchResult&gt; results
+-LocalDateTime timestamp
+--
++getSummary(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>618</y><w>24</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+
+
+
+
+
+
+
+*</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>66</x><y>780</y><w>144</w><h>174</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;270;10;180;220;180;220;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>942</y><w>126</w><h>114</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+ResponseType
+--
+-id: Long {composite}
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+-- Resp2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>252</x><y>780</y><w>30</w><h>162</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..1
+m2=1
+</panel_attributes><additional_attributes>10;250;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>186</x><y>930</y><w>174</w><h>180</h></coordinates><panel_attributes>SearchConstraints
+--
+-int groupSize
+-Double maxBudgetPerPerson
+-Double maxDrinkPrice
+-DayOfWeek day
+-LocalTime startTime
+-LocalTime endTime
+-String location
+-Double searchLatitude
+-Double searchLongitude
+-Double maxDistanceKm
+-List &lt;String&gt; foodPreferences
+-List&lt;String&gt; drinkPreferences
+-List&lt;String&gt; venuePreferences
+-boolean happyHourRequired
+--
++getMissingFields(): List&lt;String&gt;
++isComplete(): boolean
++update(SearchConstraints changes): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>342</x><y>798</y><w>96</w><h>144</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;220;10;130;130;130;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>408</x><y>930</y><w>132</w><h>90</h></coordinates><panel_attributes>SearchResult
+--
+-Restaurant restaurant
+-HappyHourDeal happyHourDeal
+-List&lt;String&gt; matchedPreferences
+-List&lt;String&gt; warnings
+-double distance
+-boolean nearMatch
+--
++getMatchSummary(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>798</y><w>24</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes><additional_attributes>10;10;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>780</y><w>168</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=*
+
+                                                   </panel_attributes><additional_attributes>10;10;10;180;250;180;250;250</additional_attributes></element><element><id>Relation</id><coordinates><x>414</x><y>1014</y><w>24</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m2=*</panel_attributes><additional_attributes>10;180;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>1122</y><w>162</w><h>132</h></coordinates><panel_attributes>Restaurant
+--
+-String restaurantId
+-String name
+-String address
+-double latitude
+-double longitude
+-String cuisine
+-List&lt;String&gt;tags
+-LocalTime opensAt
+-LocalTime closesAt
+-LocalDate lastUpdated
+--
++hasValidLocation(): boolean
++distanceTo(double lat, double lon): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>1014</y><w>30</w><h>294</h></coordinates><panel_attributes>lt=-&gt;
+m1=*
+m2=0..1
+</panel_attributes><additional_attributes>10;10;10;470</additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>1296</y><w>246</w><h>114</h></coordinates><panel_attributes>HappyHourDeal
+--
+-DayOfWeek day
+-LocalTime startTime
+-LocalTime endTime
+-String description
+-Double drinkPrice
+-Double avgCostPerPerson
+-LocalDate lastUpdated
+--
++isAvailableAt(DayOfWeek d, LocalTime from, LocalTime to): boolean
++matchesBudget(double maxPerPerson) boolean
++getFreshness() String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>1248</y><w>96</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;10;10;50;120;30;120;80</additional_attributes></element><element><id>Relation</id><coordinates><x>522</x><y>462</y><w>402</w><h>78</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>640;110;640;80;10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>744</x><y>528</y><w>270</w><h>96</h></coordinates><panel_attributes>RestaurantAgent
+--
+-LLMClient llmClient
+-RecommendationService recommendationService
+--
++processRequest(String text): AgentResponse
++answerClarification(String text, SearchConstraints current): AgentResponse
++refineSearch(String text, SearchConstraints ):AgentResponse
++rerunSearch(SearchConstraints c): AgentResponse
++generateExplanation(SearchResult r, SearchConstraints c): String
+-clarifyRequest(SearchConstraints c): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>888</x><y>618</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>786</x><y>678</y><w>228</w><h>60</h></coordinates><panel_attributes>RecommendationService
+--
+-RestaurantDataProvider provider
+-List&lt;FilterStrategy&gt; filters
+--
++findMatches(SearchConstraints c): List&lt;SearchResult&gt;
++findNearMatches(SearchConstraints c): List&lt;SearchResult&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>516</x><y>732</y><w>366</w><h>210</h></coordinates><panel_attributes>lt=&lt;.
+
+
+creates</panel_attributes><additional_attributes>10;330;10;170;100;70;590;70;590;10</additional_attributes></element><element><id>Relation</id><coordinates><x>798</x><y>732</y><w>120</w><h>114</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes><additional_attributes>170;10;170;120;10;120;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>834</y><w>264</w><h>66</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+FilterStrategy
+--
+
+--
++filter(List&lt;Restaurant&gt;restaurants, SearchConstraints c):List&lt;Restaurant&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>1038</y><w>258</w><h>54</h></coordinates><panel_attributes>TimeFilter
+--
+
+--
++filter(List&lt;Restaurant&gt; restaurants, SearchConstraints c):List&lt;Restaurant&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>774</x><y>1038</y><w>264</w><h>54</h></coordinates><panel_attributes>BudgetFilter
+--
+
+--
++filter(List&lt;Restaurant&gt; restaurants,SearchConstraints c): List &lt;Restaurant&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1050</x><y>1038</y><w>264</w><h>54</h></coordinates><panel_attributes>LocationFilter
+--
+
+--
++filter(List&lt;Restaurant&gt; restaurants, SearchConstraints c): List&lt;Restaurant&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1320</x><y>1038</y><w>270</w><h>54</h></coordinates><panel_attributes>PreferenceFilter
+--
+
+--
++filter(List&lt;Restaurant&gt; restaurants, SearchConstraints c): List&lt;Restaurant&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>642</x><y>894</y><w>120</w><h>156</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>180;10;180;110;10;110;10;240</additional_attributes></element><element><id>Relation</id><coordinates><x>828</x><y>894</y><w>18</w><h>156</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;240</additional_attributes></element><element><id>Relation</id><coordinates><x>936</x><y>894</y><w>210</w><h>156</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;130;330;130;330;240</additional_attributes></element><element><id>Relation</id><coordinates><x>966</x><y>894</y><w>408</w><h>156</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;70;340;70;340;130;660;130;660;240</additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>732</y><w>738</w><h>192</h></coordinates><panel_attributes>lt=&lt;-
+gets provider from</panel_attributes><additional_attributes>1210;300;1210;80;10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1572</x><y>912</y><w>168</w><h>60</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+ProviderFactory
+--
+
+--
++createProvider(): RestaurantDataProvider</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1524</x><y>1122</y><w>168</w><h>60</h></coordinates><panel_attributes>CuratedProviderFactory
+--
+-Path datasetFile
+--
++createProvider(): RestaurantDataProvider</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1608</x><y>1248</y><w>198</w><h>84</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+RestaurantDataProvider
+--
+
+--
++findRestaurants(SearchConstraints c): List&lt;Restaurant&gt;
++getRestaurant(String id): Restaurant
++resolveLocation(SearchConstraints c): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1584</x><y>1410</y><w>198</w><h>84</h></coordinates><panel_attributes>CuratedTorontoDataProvider
+--
+-Path datasetFile
+-List&lt;Restaurant&gt; restaurants
+--
++findRestaurants(SearchConstraints c): List&lt;Restaurant&gt;
++getRestaurant(String id): Restaurant
++resolveLocation(SearchConstraints c): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1584</x><y>1182</y><w>42</w><h>240</h></coordinates><panel_attributes>lt=&lt;.
+
+
+
+
+
+
+
+
+
+
+creates</panel_attributes><additional_attributes>10;380;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1716</x><y>1326</y><w>18</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>1608</x><y>966</y><w>18</w><h>168</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;260</additional_attributes></element><element><id>Relation</id><coordinates><x>1710</x><y>966</y><w>42</w><h>294</h></coordinates><panel_attributes>lt=&lt;.
+creates</panel_attributes><additional_attributes>10;470;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>990</x><y>732</y><w>810</w><h>528</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>1320;860;1320;40;10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>978</x><y>618</y><w>906</w><h>234</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=1</panel_attributes><additional_attributes>10;10;10;50;1480;50;1480;370</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1794</x><y>840</y><w>162</w><h>60</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+LLMClient
+--
+
+--
++generateResponse(String prompt) String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1866</x><y>894</y><w>18</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1800</x><y>984</y><w>162</w><h>66</h></coordinates><panel_attributes>OpenAILLMClient
+--
+-String modelName
+-String apiKey
+--
++generateResponse(String prompt): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1872</x><y>1044</y><w>42</w><h>312</h></coordinates><panel_attributes>lt=&lt;-
+adapts</panel_attributes><additional_attributes>10;500;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1818</x><y>1344</y><w>150</w><h>60</h></coordinates><panel_attributes>&lt;&lt;external&gt;&gt;
+OpenAIAPI
+--
+
+--
++sendRequest(String jsonBody) String
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
