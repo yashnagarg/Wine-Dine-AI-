@@ -587,7 +587,7 @@ Each interface would call several subsystem classes in the right order, so both 
 *SD01: Search with Clarification*  
 It shows usage of Use Cases UC01 UC02 and Features F01 F02 F03 F04 F05 F06 F07.
 
--- some glitch with the png export for SD01
+<img width="3930" height="3510" alt="Image" src="https://github.com/user-attachments/assets/0a8485bc-3c05-4d70-b7eb-64d6b90e7a53" />
 
 *SD02: Refine Search*  
 It shows usage of Use Case UC03 and Feature F09.
