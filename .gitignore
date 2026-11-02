@@ -28,3 +28,9 @@ replay_pid*
 .env.*
 !.env.example
 .vscode/
+target/
+data/history.json
+
+.idea/
+*.iml
+.DS_Store
