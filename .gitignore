@@ -30,6 +30,8 @@ replay_pid*
 .vscode/
 target/
 data/history.json
+config.local.json
+
 
 .idea/
 *.iml
