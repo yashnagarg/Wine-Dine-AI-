@@ -1,38 +1,39 @@
 package com.winedine.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-/** Carries the outcome of an action from the controller to a view. */
-public class AgentResponse {
-
+/** What the agent returns to the GUI or CLI: a clarification question, results, or an error. */
+public final class AgentResponse {
     private final ResponseType type;
     private final String message;
+    private final SearchConstraints constraints;
     private final List<SearchResult> results;
-    private final List<String> notices;
 
-    private AgentResponse(ResponseType type, String message, List<SearchResult> results, List<String> notices) {
+    private AgentResponse(ResponseType type, String message, SearchConstraints constraints,
+                          List<SearchResult> results) {
         this.type = type;
-        this.message = message;
-        this.results = results;
-        this.notices = notices;
+        this.message = message == null ? "" : message;
+        this.constraints = constraints;
+        this.results = results == null ? new ArrayList<>() : new ArrayList<>(results);
     }
 
-    public static AgentResponse clarification(String question) {
-        return new AgentResponse(ResponseType.CLARIFICATION, question, new ArrayList<>(), new ArrayList<>());
+    public static AgentResponse clarification(String question, SearchConstraints constraints) {
+        return new AgentResponse(ResponseType.CLARIFICATION, question, constraints, null);
     }
 
-    public static AgentResponse results(List<SearchResult> results, List<String> notices) {
-        return new AgentResponse(ResponseType.RESULTS, null, results, notices);
+    /** {@code notice} may be empty; it carries messages such as "showing near matches". */
+    public static AgentResponse results(List<SearchResult> results, SearchConstraints constraints, String notice) {
+        return new AgentResponse(ResponseType.RESULTS, notice, constraints, results);
     }
 
     public static AgentResponse error(String message) {
-        return new AgentResponse(ResponseType.ERROR, message, new ArrayList<>(), new ArrayList<>());
+        return new AgentResponse(ResponseType.ERROR, message, null, null);
     }
 
     public ResponseType getType() { return type; }
     public String getMessage() { return message; }
-    public List<SearchResult> getResults() { return results; }
-    public List<String> getNotices() { return notices; }
-
+    public SearchConstraints getConstraints() { return constraints; }
+    public List<SearchResult> getResults() { return Collections.unmodifiableList(results); }
 }

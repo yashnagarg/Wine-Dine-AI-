@@ -1,8 +1,6 @@
 package com.winedine.model;
 
-//Ranking profile chosen by the LLM from the user's wording ("cheapest first", "closest first").
+/** Which ranking rule the user wants, chosen by the agent from phrases like "cheapest first". */
 public enum RankingProfile {
-    BALANCED,
-    BUDGET_FIRST,
-    DISTANCE_FIRST
+    BALANCED, BUDGET_FIRST, DISTANCE_FIRST
 }

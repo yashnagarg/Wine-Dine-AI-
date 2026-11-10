@@ -1,50 +1,82 @@
 package com.winedine.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
-/** One matched restaurant with its deal, matched preferences, warnings and distance. */
+/** One recommended restaurant with its deal and the reasons it matched. */
 public class SearchResult {
-    private Restaurant restaurant;
-    private HappyHourDeal deal;
-    private List<String> matchedPreferences = new ArrayList<>();
-    private List<String> warnings = new ArrayList<>();
-    private double distanceKm = Double.NaN;
-    private boolean nearMatch;
+    private final Restaurant restaurant;
+    private final HappyHourDeal happyHourDeal;
+    private final List<String> matchedPreferences;
+    private final List<String> warnings;
+    private final Double distanceKm;
+    private final boolean nearMatch;
+    private double score;
+    private boolean comparableAlternative;
 
-    public SearchResult() { }
-
-    public SearchResult(Restaurant restaurant, HappyHourDeal deal) {
+    public SearchResult(Restaurant restaurant, HappyHourDeal happyHourDeal, List<String> matchedPreferences,
+                        List<String> warnings, Double distanceKm, boolean nearMatch) {
         this.restaurant = restaurant;
-        this.deal = deal;
-    }
-
-    /** Verified facts only; this is what the LLM is allowed to phrase (F08). */
-    public String getMatchSummary() {
-        StringBuilder sb = new StringBuilder(restaurant.getName());
-        if (!matchedPreferences.isEmpty()) sb.append(" | matches: ").append(String.join(", ", matchedPreferences));
-        if (deal != null) {
-            sb.append(" | drink: ").append(deal.getDrinkPrice() == null ? "unavailable" : "$" + deal.getDrinkPrice());
-            sb.append(" | avg/person: ").append(deal.getAvgCostPerPerson() == null ? "unavailable" : "$" + deal.getAvgCostPerPerson());
-            sb.append(" | deal: ").append(deal.getStart()).append("-").append(deal.getEnd());
-        }
-        sb.append(" | distance: ").append(Double.isNaN(distanceKm) ? "unavailable" : String.format("%.1f km", distanceKm));
-        if (nearMatch) sb.append(" | NEAR MATCH");
-        if (!warnings.isEmpty()) sb.append(" | warnings: ").append(String.join("; ", warnings));
-        return sb.toString();
+        this.happyHourDeal = happyHourDeal;
+        this.matchedPreferences = matchedPreferences == null ? new ArrayList<>() : new ArrayList<>(matchedPreferences);
+        this.warnings = warnings == null ? new ArrayList<>() : new ArrayList<>(warnings);
+        this.distanceKm = distanceKm;
+        this.nearMatch = nearMatch;
     }
 
     public Restaurant getRestaurant() { return restaurant; }
-    public HappyHourDeal getDeal() { return deal; }
-    public List<String> getMatchedPreferences() { return matchedPreferences; }
-    public List<String> getWarnings() { return warnings; }
-    public double getDistanceKm() { return distanceKm; }
+    public HappyHourDeal getHappyHourDeal() { return happyHourDeal; }
+    public List<String> getMatchedPreferences() { return Collections.unmodifiableList(matchedPreferences); }
+    public List<String> getWarnings() { return Collections.unmodifiableList(warnings); }
+    public Double getDistanceKm() { return distanceKm; }
     public boolean isNearMatch() { return nearMatch; }
+    public double getScore() { return score; }
+    public void setScore(double score) { this.score = score; }
+    public boolean isComparableAlternative() { return comparableAlternative; }
+    public void setComparableAlternative(boolean v) { this.comparableAlternative = v; }
 
-    public void setDistanceKm(double d) { distanceKm = d; }
-    public void setNearMatch(boolean b) { nearMatch = b; }
-    public void addWarning(String w) { warnings.add(w); }
-    public void addMatchedPreference(String p) { matchedPreferences.add(p); }
+    /**
+     * The verified facts about this recommendation, one per line. This text is the only
+     * information the LLM may use when it phrases an explanation (feature F08).
+     */
+    public String getMatchSummary() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Restaurant: ").append(restaurant.getName());
+        if (!restaurant.getCuisine().isEmpty()) {
+            sb.append(" (").append(restaurant.getCuisine()).append(")");
+        }
+        sb.append("\n");
+        sb.append("Address: ").append(restaurant.getAddress().isEmpty() ? "unavailable" : restaurant.getAddress()).append("\n");
+        sb.append("Distance: ").append(distanceKm == null ? "unavailable"
+                : String.format(Locale.ROOT, "%.1f km", distanceKm)).append("\n");
+        sb.append("Matched preferences: ").append(matchedPreferences.isEmpty() ? "none"
+                : String.join(", ", matchedPreferences)).append("\n");
+        if (happyHourDeal == null) {
+            sb.append("Deal: no happy-hour deal at the requested time\n");
+        } else {
+            sb.append("Deal: ").append(happyHourDeal.getDescription());
+            if (happyHourDeal.getDay() != null) {
+                sb.append(" (").append(happyHourDeal.getDay()).append(" ")
+                        .append(happyHourDeal.getStartTime()).append("-").append(happyHourDeal.getEndTime()).append(")");
+            }
+            sb.append("\n");
+            sb.append("Drink price: ").append(money(happyHourDeal.getDrinkPrice())).append("\n");
+            sb.append("Average cost per person: ").append(money(happyHourDeal.getAvgCostPerPerson())).append("\n");
+            sb.append("Deal last updated: ").append(happyHourDeal.getLastUpdated() == null ? "unavailable"
+                    : happyHourDeal.getLastUpdated() + " (" + happyHourDeal.getFreshness() + ")").append("\n");
+        }
+        if (nearMatch) {
+            sb.append("Near match: this is the closest alternative, not an exact match\n");
+        }
+        for (String w : warnings) {
+            sb.append("Warning: ").append(w).append("\n");
+        }
+        return sb.toString();
+    }
+
+    private static String money(Double v) {
+        return v == null ? "unavailable" : String.format(Locale.ROOT, "$%.2f", v);
+    }
 }
-
-

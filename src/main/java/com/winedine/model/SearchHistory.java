@@ -1,36 +1,42 @@
 package com.winedine.model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
-/** One saved search (F12). */
+/** One saved search: what the user asked, the constraints, the results, and when. */
 public class SearchHistory {
-    public static final int OUTDATED_DAYS = 30;
+    private final String id;
+    private final String originalQuery;
+    private final SearchConstraints constraints;
+    private final List<SearchResult> results;
+    private final LocalDateTime timestamp;
 
-    private String id;
-    private String query;
-    private SearchConstraints constraints;
-    private List<SearchResult> results;
-    private LocalDateTime savedAt;
-
-    public SearchHistory() { }
-
-    public SearchHistory(String id, String query, SearchConstraints constraints,
-                         List<SearchResult> results, LocalDateTime savedAt) {
-        this.id = id;
-        this.query = query;
-        this.constraints = constraints;
-        this.results = results;
-        this.savedAt = savedAt;
+    public SearchHistory(String originalQuery, SearchConstraints constraints, List<SearchResult> results,
+                         LocalDateTime timestamp) {
+        this(UUID.randomUUID().toString(), originalQuery, constraints, results, timestamp);
     }
 
-    public boolean isOutdated(LocalDateTime now) {
-        return savedAt == null || savedAt.plusDays(OUTDATED_DAYS).isBefore(now);
+    public SearchHistory(String id, String originalQuery, SearchConstraints constraints,
+                         List<SearchResult> results, LocalDateTime timestamp) {
+        this.id = id;
+        this.originalQuery = originalQuery == null ? "" : originalQuery;
+        this.constraints = constraints == null ? new SearchConstraints() : constraints.copy();
+        this.results = results == null ? new ArrayList<>() : new ArrayList<>(results);
+        this.timestamp = timestamp;
     }
 
     public String getId() { return id; }
-    public String getQuery() { return query; }
-    public SearchConstraints getConstraints() { return constraints; }
-    public List<SearchResult> getResults() { return results; }
-    public LocalDateTime getSavedAt() { return savedAt; }
+    public String getOriginalQuery() { return originalQuery; }
+    public SearchConstraints getConstraints() { return constraints.copy(); }
+    public List<SearchResult> getResults() { return Collections.unmodifiableList(results); }
+    public LocalDateTime getTimestamp() { return timestamp; }
+
+    /** One-line description for the history list. */
+    public String getSummary() {
+        return timestamp.truncatedTo(java.time.temporal.ChronoUnit.MINUTES).toString().replace('T', ' ')
+                + " | \"" + originalQuery + "\" | " + results.size() + " result(s)";
+    }
 }

@@ -3,46 +3,39 @@ package com.winedine.model;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-/** A Toronto venue with its deals. Loaded from the curated JSON dataset. */
+/** A restaurant or bar with its location, opening hours and happy-hour deals. */
 public class Restaurant {
-    private String id;
-    private String name;
-    private String address;
-    private Double latitude;   // null = no valid location
-    private Double longitude;
-    private String cuisine;
-    private List<String> tags = new ArrayList<>();
-    private LocalTime opensAt;
-    private LocalTime closesAt;
-    private LocalDate lastUpdated;
-    private List<HappyHourDeal> deals = new ArrayList<>();
+    private static final double EARTH_RADIUS_KM = 6371.0088;
 
-    public Restaurant() { }
+    private final String id;
+    private final String name;
+    private final String address;
+    private final Double latitude;
+    private final Double longitude;
+    private final String cuisine;
+    private final List<String> tags;
+    private final LocalTime opensAt;
+    private final LocalTime closesAt;
+    private final LocalDate lastUpdated;
+    private final List<HappyHourDeal> deals;
 
-    public boolean hasValidLocation() {
-        return latitude != null && longitude != null
-                && latitude >= -90 && latitude <= 90
-                && longitude >= -180 && longitude <= 180;
-    }
-
-    /** Haversine distance in km. Returns Double.NaN if this restaurant has no valid location. */
-    public double distanceTo(double lat, double lng) {
-        if (!hasValidLocation()) return Double.NaN;
-        double r = 6371.0;
-        double dLat = Math.toRadians(lat - latitude);
-        double dLng = Math.toRadians(lng - longitude);
-        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2)
-                + Math.cos(Math.toRadians(latitude)) * Math.cos(Math.toRadians(lat))
-                * Math.sin(dLng / 2) * Math.sin(dLng / 2);
-        return 2 * r * Math.asin(Math.sqrt(a));
-    }
-
-    public boolean isOpenAt(LocalTime time) {
-        if (time == null || opensAt == null || closesAt == null) return true;
-        if (closesAt.isAfter(opensAt)) return !time.isBefore(opensAt) && time.isBefore(closesAt);
-        return !time.isBefore(opensAt) || time.isBefore(closesAt); // crosses midnight
+    public Restaurant(String id, String name, String address, Double latitude, Double longitude,
+                      String cuisine, List<String> tags, LocalTime opensAt, LocalTime closesAt,
+                      LocalDate lastUpdated, List<HappyHourDeal> deals) {
+        this.id = id;
+        this.name = name;
+        this.address = address == null ? "" : address;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.cuisine = cuisine == null ? "" : cuisine;
+        this.tags = tags == null ? new ArrayList<>() : new ArrayList<>(tags);
+        this.opensAt = opensAt;
+        this.closesAt = closesAt;
+        this.lastUpdated = lastUpdated;
+        this.deals = deals == null ? new ArrayList<>() : new ArrayList<>(deals);
     }
 
     public String getId() { return id; }
@@ -51,21 +44,49 @@ public class Restaurant {
     public Double getLatitude() { return latitude; }
     public Double getLongitude() { return longitude; }
     public String getCuisine() { return cuisine; }
-    public List<String> getTags() { return tags; }
+    public List<String> getTags() { return Collections.unmodifiableList(tags); }
     public LocalTime getOpensAt() { return opensAt; }
     public LocalTime getClosesAt() { return closesAt; }
     public LocalDate getLastUpdated() { return lastUpdated; }
-    public List<HappyHourDeal> getDeals() { return deals; }
+    public List<HappyHourDeal> getDeals() { return Collections.unmodifiableList(deals); }
 
-    public void setId(String id) { this.id = id; }
-    public void setName(String name) { this.name = name; }
-    public void setAddress(String address) { this.address = address; }
-    public void setLatitude(Double latitude) { this.latitude = latitude; }
-    public void setLongitude(Double longitude) { this.longitude = longitude; }
-    public void setCuisine(String cuisine) { this.cuisine = cuisine; }
-    public void setTags(List<String> tags) { this.tags = tags; }
-    public void setOpensAt(LocalTime opensAt) { this.opensAt = opensAt; }
-    public void setClosesAt(LocalTime closesAt) { this.closesAt = closesAt; }
-    public void setLastUpdated(LocalDate lastUpdated) { this.lastUpdated = lastUpdated; }
-    public void setDeals(List<HappyHourDeal> deals) { this.deals = deals; }
+    /** True if coordinates are present and within valid latitude/longitude ranges. */
+    public boolean hasValidLocation() {
+        return latitude != null && longitude != null
+                && !latitude.isNaN() && !longitude.isNaN()
+                && latitude >= -90 && latitude <= 90
+                && longitude >= -180 && longitude <= 180;
+    }
+
+    /** Great-circle distance in km to a point, or NaN if this restaurant has no valid location. */
+    public double distanceTo(double lat, double lon) {
+        if (!hasValidLocation()) {
+            return Double.NaN;
+        }
+        double dLat = Math.toRadians(lat - latitude);
+        double dLon = Math.toRadians(lon - longitude);
+        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2)
+                + Math.cos(Math.toRadians(latitude)) * Math.cos(Math.toRadians(lat))
+                * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        return EARTH_RADIUS_KM * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    /**
+     * True if the restaurant is open at some point in the time window.
+     * Unknown opening hours or an unspecified window count as open.
+     */
+    public boolean isOpenDuring(LocalTime from, LocalTime to) {
+        if (opensAt == null || closesAt == null || from == null || to == null) {
+            return true;
+        }
+        if (closesAt.isAfter(opensAt)) {
+            return opensAt.isBefore(to) && from.isBefore(closesAt);
+        }
+        // Closes after midnight (e.g. 11:00 to 02:00).
+        return to.isAfter(opensAt) || from.isBefore(closesAt);
+    }
+
+    public Freshness getFreshness(LocalDate today) {
+        return Freshness.of(lastUpdated, today);
+    }
 }

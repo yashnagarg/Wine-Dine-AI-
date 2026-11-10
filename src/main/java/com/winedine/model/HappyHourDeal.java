@@ -3,77 +3,69 @@ package com.winedine.model;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.temporal.ChronoUnit;
-import java.util.List;
 
+/** A happy-hour deal at a restaurant. Prices and the update date may be unknown (null). */
 public class HappyHourDeal {
+    private final DayOfWeek day;
+    private final LocalTime startTime;
+    private final LocalTime endTime;
+    private final String description;
+    private final Double drinkPrice;
+    private final Double avgCostPerPerson;
+    private final LocalDate lastUpdated;
 
-    public static final int FRESH_DAYS = 30;
-
-    private List<DayOfWeek> days;
-    private LocalTime start;
-    private LocalTime end;
-    private Double drinkPrice;        // null = unavailable
-    private Double avgCostPerPerson;  // null = unavailable
-    private String description;
-    private LocalDate lastUpdated;    // null = unknown
-
-    public HappyHourDeal() { }
-
-    public HappyHourDeal(List<DayOfWeek> days, LocalTime start, LocalTime end,
-                         Double drinkPrice, Double avgCostPerPerson,
-                         String description, LocalDate lastUpdated) {
-        this.days = days;
-        this.start = start;
-        this.end = end;
+    public HappyHourDeal(DayOfWeek day, LocalTime startTime, LocalTime endTime, String description,
+                         Double drinkPrice, Double avgCostPerPerson, LocalDate lastUpdated) {
+        this.day = day;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.description = description == null ? "" : description;
         this.drinkPrice = drinkPrice;
         this.avgCostPerPerson = avgCostPerPerson;
-        this.description = description;
         this.lastUpdated = lastUpdated;
     }
 
-    /** True if the deal window overlaps [from, to] on the given day. */
-    public boolean overlaps(DayOfWeek day, LocalTime from, LocalTime to) {
-        if (days == null || start == null || end == null) return false;
-        if (day != null && !days.contains(day)) return false;
-        if (from == null || to == null) return true;
-        return start.isBefore(to) && end.isAfter(from);
+    public DayOfWeek getDay() { return day; }
+    public LocalTime getStartTime() { return startTime; }
+    public LocalTime getEndTime() { return endTime; }
+    public String getDescription() { return description; }
+    public Double getDrinkPrice() { return drinkPrice; }
+    public Double getAvgCostPerPerson() { return avgCostPerPerson; }
+    public LocalDate getLastUpdated() { return lastUpdated; }
+
+    /**
+     * True if this deal runs on the given day and overlaps the requested time window.
+     * A null day or null time means "no restriction" for that part.
+     */
+    public boolean isAvailableAt(DayOfWeek requestedDay, LocalTime from, LocalTime to) {
+        if (requestedDay != null && day != null && requestedDay != day) {
+            return false;
+        }
+        if (from == null || to == null || startTime == null || endTime == null) {
+            return true;
+        }
+        return startTime.isBefore(to) && from.isBefore(endTime);
     }
 
-    /** True if the deal is running at a single moment. */
-    public boolean isAvailableAt(DayOfWeek day, LocalTime time) {
-        if (days == null || start == null || end == null) return false;
-        if (day != null && !days.contains(day)) return false;
-        if (time == null) return true;
-        return !time.isBefore(start) && time.isBefore(end);
+    public boolean isCostKnown() { return avgCostPerPerson != null; }
+
+    public boolean isDrinkPriceKnown() { return drinkPrice != null; }
+
+    /** True only if the cost is known and at most the given per-person budget. */
+    public boolean matchesBudget(double maxPerPerson) {
+        return avgCostPerPerson != null && avgCostPerPerson <= maxPerPerson;
     }
 
-    /** True if the deal fits the budget. Unknown prices never fail here; the caller adds a warning. */
-    public boolean matchesBudget(Double maxBudgetPerPerson, Double maxDrinkPrice) {
-        if (maxBudgetPerPerson != null && avgCostPerPerson != null
-                && avgCostPerPerson > maxBudgetPerPerson) return false;
-        if (maxDrinkPrice != null && drinkPrice != null
-                && drinkPrice > maxDrinkPrice) return false;
-        return true;
-    }
-
-    public boolean hasUnknownPrice() {
-        return drinkPrice == null || avgCostPerPerson == null;
+    /** True only if the drink price is known and at most the given limit. */
+    public boolean matchesDrinkPrice(double maxDrinkPrice) {
+        return drinkPrice != null && drinkPrice <= maxDrinkPrice;
     }
 
     public Freshness getFreshness(LocalDate today) {
-        if (lastUpdated == null) return Freshness.UNKNOWN;
-        long age = ChronoUnit.DAYS.between(lastUpdated, today);
-        return age <= FRESH_DAYS ? Freshness.FRESH : Freshness.STALE;
+        return Freshness.of(lastUpdated, today);
     }
 
-    public List<DayOfWeek> getDays() { return days; }
-    public LocalTime getStart() { return start; }
-    public LocalTime getEnd() { return end; }
-    public Double getDrinkPrice() { return drinkPrice; }
-    public Double getAvgCostPerPerson() { return avgCostPerPerson; }
-    public String getDescription() { return description; }
-    public LocalDate getLastUpdated() { return lastUpdated; }
+    public Freshness getFreshness() {
+        return getFreshness(LocalDate.now());
+    }
 }
-    
-
