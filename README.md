@@ -5,7 +5,7 @@ A Java AI agent that finds Toronto restaurants and happy-hour deals from a plain
 follow-up questions and explains results; Java code does the filtering, ranking, freshness checks,
 history and map links, so recommendations only ever come from verified data.
 
-EECS3311 Fall 2026 project, Stage 2 (implementation).
+EECS3311 Fall 2026 project.
 
 ## Prerequisites
 
@@ -83,6 +83,10 @@ mvn test
 
 ## Data
 
-`data/restaurants.json` is the curated dataset (restaurants, happy-hour deals, Toronto landmarks).
-Unknown prices or dates are stored as `null` and shown as "unavailable" or "freshness unknown";
-nothing is guessed.
+`data/restaurants.json` is the curated dataset (real Toronto restaurants, their happy-hour deals, and landmarks),
+entered by hand from published happy-hour menus. Unknown prices, hours or dates are stored as `null` and shown as
+"unavailable" or "freshness unknown"; nothing is guessed. Coordinates are approximate.
+
+`src/test/resources/test-restaurants.json` is a test fixture with extra fictional venues that are deliberately
+stale, unpriced or without coordinates. To see the warnings in a demo, set
+`DATASET_PATH=src/test/resources/test-restaurants.json` in `.env`.
