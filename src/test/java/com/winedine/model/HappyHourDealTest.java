@@ -62,4 +62,29 @@ class HappyHourDealTest {
         assertEquals(Freshness.STALE, fridayDeal(6.0, 14.0, today.minusDays(60)).getFreshness(today));
         assertEquals(Freshness.UNKNOWN, fridayDeal(6.0, 14.0, null).getFreshness(today));
     }
+
+    @Test
+    void dealThatRunsPastMidnightMatchesLateWindows() {
+        HappyHourDeal late = new HappyHourDeal(DayOfWeek.TUESDAY, LocalTime.of(22, 0), LocalTime.of(2, 0),
+                "late night", 7.0, null, null);
+        assertTrue(late.isAvailableAt(DayOfWeek.TUESDAY, LocalTime.of(22, 0), LocalTime.of(23, 30)));
+        assertTrue(late.isAvailableAt(DayOfWeek.TUESDAY, LocalTime.of(21, 0), LocalTime.of(23, 0)));
+        assertFalse(late.isAvailableAt(DayOfWeek.TUESDAY, LocalTime.of(17, 0), LocalTime.of(19, 0)));
+    }
+
+    @Test
+    void dealThatEndsAtMidnightDoesNotMatchTheAfternoon() {
+        HappyHourDeal evening = new HappyHourDeal(DayOfWeek.FRIDAY, LocalTime.of(21, 0), LocalTime.MIDNIGHT,
+                "late", 5.0, null, null);
+        assertTrue(evening.isAvailableAt(DayOfWeek.FRIDAY, LocalTime.of(20, 0), LocalTime.of(22, 0)));
+        assertFalse(evening.isAvailableAt(DayOfWeek.FRIDAY, LocalTime.of(17, 0), LocalTime.of(19, 0)));
+    }
+
+    @Test
+    void searchWindowThatCrossesMidnightMatchesLateDeals() {
+        HappyHourDeal late = new HappyHourDeal(DayOfWeek.TUESDAY, LocalTime.of(22, 0), LocalTime.of(2, 0),
+                "late night", 7.0, null, null);
+        assertTrue(late.isAvailableAt(DayOfWeek.TUESDAY, LocalTime.of(22, 0), LocalTime.of(1, 0)));
+        assertFalse(fridayDeal(6.0, 14.0, null).isAvailableAt(DayOfWeek.FRIDAY, LocalTime.of(22, 0), LocalTime.of(1, 0)));
+    }
 }

@@ -44,7 +44,30 @@ public class HappyHourDeal {
         if (from == null || to == null || startTime == null || endTime == null) {
             return true;
         }
-        return startTime.isBefore(to) && from.isBefore(endTime);
+        for (int[] deal : segments(startTime, endTime)) {
+            for (int[] window : segments(from, to)) {
+                if (deal[0] < window[1] && window[0] < deal[1]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Minute-of-day intervals covered by a time range. A range that ends at midnight or at an earlier
+     * time than it starts (for example 22:00-02:00) runs past midnight and is split in two.
+     */
+    private static int[][] segments(LocalTime start, LocalTime end) {
+        int s = start.getHour() * 60 + start.getMinute();
+        int e = end.getHour() * 60 + end.getMinute();
+        if (e == 0) {
+            return new int[][] {{s, 24 * 60}};
+        }
+        if (e < s) {
+            return new int[][] {{s, 24 * 60}, {0, e}};
+        }
+        return new int[][] {{s, e}};
     }
 
     public boolean isCostKnown() { return avgCostPerPerson != null; }
