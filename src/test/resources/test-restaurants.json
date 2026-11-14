@@ -1,0 +1,2741 @@
+{
+  "_comment": "TEST FIXTURE: r01-r18 are fictional venues with made-up prices; r19 onward are copies of real entries. Contains stale, undated, unpriced and no-coordinate venues on purpose so the warning features can be tested and demonstrated. Do not use as real data.",
+  "landmarks": [
+    {
+      "name": "Osgoode Station",
+      "latitude": 43.6508,
+      "longitude": -79.3868,
+      "aliases": [
+        "osgoode",
+        "osgoode subway"
+      ]
+    },
+    {
+      "name": "College Station",
+      "latitude": 43.6613,
+      "longitude": -79.383,
+      "aliases": [
+        "college",
+        "college subway"
+      ]
+    },
+    {
+      "name": "Union Station",
+      "latitude": 43.6453,
+      "longitude": -79.3806,
+      "aliases": [
+        "union"
+      ]
+    },
+    {
+      "name": "Dundas Station",
+      "latitude": 43.6561,
+      "longitude": -79.3802,
+      "aliases": [
+        "dundas",
+        "dundas square",
+        "yonge dundas"
+      ]
+    },
+    {
+      "name": "Queen Station",
+      "latitude": 43.6524,
+      "longitude": -79.3792,
+      "aliases": []
+    },
+    {
+      "name": "St. Andrew Station",
+      "latitude": 43.6479,
+      "longitude": -79.3846,
+      "aliases": [
+        "st andrew"
+      ]
+    },
+    {
+      "name": "Queen and Spadina",
+      "latitude": 43.6489,
+      "longitude": -79.3954,
+      "aliases": [
+        "spadina",
+        "queen spadina"
+      ]
+    },
+    {
+      "name": "Kensington Market",
+      "latitude": 43.6547,
+      "longitude": -79.4005,
+      "aliases": [
+        "kensington"
+      ]
+    },
+    {
+      "name": "Bloor-Yonge Station",
+      "latitude": 43.6709,
+      "longitude": -79.3857,
+      "aliases": [
+        "bloor yonge",
+        "yonge and bloor",
+        "bloor"
+      ]
+    },
+    {
+      "name": "Harbourfront",
+      "latitude": 43.6389,
+      "longitude": -79.3816,
+      "aliases": []
+    },
+    {
+      "name": "Distillery District",
+      "latitude": 43.6503,
+      "longitude": -79.3596,
+      "aliases": [
+        "distillery"
+      ]
+    },
+    {
+      "name": "Liberty Village",
+      "latitude": 43.6377,
+      "longitude": -79.4208,
+      "aliases": [
+        "liberty"
+      ]
+    },
+    {
+      "name": "Ossington",
+      "latitude": 43.6477,
+      "longitude": -79.4195,
+      "aliases": [
+        "ossington station"
+      ]
+    },
+    {
+      "name": "Finch Station",
+      "latitude": 43.7807,
+      "longitude": -79.4152,
+      "aliases": [
+        "finch",
+        "willowdale"
+      ]
+    },
+    {
+      "name": "Downtown Toronto",
+      "latitude": 43.6532,
+      "longitude": -79.3832,
+      "aliases": [
+        "downtown",
+        "toronto downtown"
+      ]
+    },
+    {
+      "name": "York University",
+      "latitude": 43.7735,
+      "longitude": -79.5019,
+      "aliases": [
+        "york u"
+      ]
+    },
+    {
+      "name": "King West",
+      "latitude": 43.6453,
+      "longitude": -79.396,
+      "aliases": [
+        "king west",
+        "king st west",
+        "king street west",
+        "entertainment district",
+        "tiff"
+      ]
+    },
+    {
+      "name": "Financial District",
+      "latitude": 43.6487,
+      "longitude": -79.3817,
+      "aliases": [
+        "financial district",
+        "bay street",
+        "king and bay",
+        "first canadian place"
+      ]
+    },
+    {
+      "name": "St. Lawrence Market",
+      "latitude": 43.6487,
+      "longitude": -79.3715,
+      "aliases": [
+        "st lawrence market",
+        "st lawrence",
+        "st. lawrence"
+      ]
+    },
+    {
+      "name": "Moss Park",
+      "latitude": 43.6556,
+      "longitude": -79.37,
+      "aliases": [
+        "moss park",
+        "jarvis",
+        "front and jarvis"
+      ]
+    },
+    {
+      "name": "Yorkville",
+      "latitude": 43.6709,
+      "longitude": -79.393,
+      "aliases": [
+        "yorkville",
+        "yorkville ave",
+        "annex",
+        "bellair"
+      ]
+    },
+    {
+      "name": "CityPlace",
+      "latitude": 43.6395,
+      "longitude": -79.397,
+      "aliases": [
+        "cityplace",
+        "city place",
+        "queens quay"
+      ]
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "r01",
+      "name": "Maple & Hops Pub",
+      "address": "10 Sample St, Toronto",
+      "latitude": 43.6502,
+      "longitude": -79.388,
+      "cuisine": "Pub",
+      "tags": [
+        "sports bar",
+        "patio",
+        "pub food"
+      ],
+      "opensAt": "11:00",
+      "closesAt": "02:00",
+      "lastUpdated": "2026-10-24",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$6 pints and half-price truffle fries",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 14.0,
+          "lastUpdated": "2026-10-24"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$6 pints and half-price truffle fries",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 14.0,
+          "lastUpdated": "2026-10-24"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$6 pints and half-price truffle fries",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 14.0,
+          "lastUpdated": "2026-10-24"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$6 pints and half-price truffle fries",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 14.0,
+          "lastUpdated": "2026-10-24"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$6 pints and half-price truffle fries",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 14.0,
+          "lastUpdated": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": "r02",
+      "name": "The Copper Spoon",
+      "address": "22 Sample Ave, Toronto",
+      "latitude": 43.6529,
+      "longitude": -79.3836,
+      "cuisine": "Italian",
+      "tags": [
+        "date night",
+        "cocktails"
+      ],
+      "opensAt": "12:00",
+      "closesAt": "23:00",
+      "lastUpdated": "2026-10-18",
+      "deals": [
+        {
+          "day": "TUESDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$8 cocktails and $5 bruschetta",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-10-18"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$8 cocktails and $5 bruschetta",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-10-18"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$8 cocktails and $5 bruschetta",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-10-18"
+        }
+      ]
+    },
+    {
+      "id": "r03",
+      "name": "Kensington Taqueria Bar",
+      "address": "31 Sample Rd, Toronto",
+      "latitude": 43.6547,
+      "longitude": -79.4005,
+      "cuisine": "Mexican",
+      "tags": [
+        "patio",
+        "tacos",
+        "margaritas"
+      ],
+      "opensAt": "11:30",
+      "closesAt": "00:00",
+      "lastUpdated": "2026-10-30",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 tacos and $7 margaritas",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 15.0,
+          "lastUpdated": "2026-10-30"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 tacos and $7 margaritas",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 15.0,
+          "lastUpdated": "2026-10-30"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 tacos and $7 margaritas",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 15.0,
+          "lastUpdated": "2026-10-30"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 tacos and $7 margaritas",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 15.0,
+          "lastUpdated": "2026-10-30"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 tacos and $7 margaritas",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 15.0,
+          "lastUpdated": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "id": "r04",
+      "name": "Union Grill",
+      "address": "5 Sample Blvd, Toronto",
+      "latitude": 43.6455,
+      "longitude": -79.381,
+      "cuisine": "American",
+      "tags": [
+        "sports bar",
+        "big screens",
+        "wings"
+      ],
+      "opensAt": "11:00",
+      "closesAt": "01:00",
+      "lastUpdated": "2026-08-12",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$5 domestic beer and $9 wings",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-08-12"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$5 domestic beer and $9 wings",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-08-12"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$5 domestic beer and $9 wings",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-08-12"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$5 domestic beer and $9 wings",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-08-12"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$5 domestic beer and $9 wings",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-08-12"
+        }
+      ]
+    },
+    {
+      "id": "r05",
+      "name": "Dundas Noodle House",
+      "address": "48 Sample St, Toronto",
+      "latitude": 43.656,
+      "longitude": -79.3805,
+      "cuisine": "Ramen",
+      "tags": [
+        "casual",
+        "quick service"
+      ],
+      "opensAt": "11:00",
+      "closesAt": "22:00",
+      "lastUpdated": "2026-10-20",
+      "deals": []
+    },
+    {
+      "id": "r06",
+      "name": "College Park Lounge",
+      "address": "77 Sample Ave, Toronto",
+      "latitude": 43.6595,
+      "longitude": -79.3835,
+      "cuisine": "Lounge",
+      "tags": [
+        "cocktails",
+        "live music"
+      ],
+      "opensAt": "17:00",
+      "closesAt": "02:00",
+      "lastUpdated": "2026-10-27",
+      "deals": [
+        {
+          "day": "THURSDAY",
+          "startTime": "17:00",
+          "endTime": "20:00",
+          "description": "Live music night with $9 cocktails",
+          "drinkPrice": 9.0,
+          "avgCostPerPerson": 22.0,
+          "lastUpdated": "2026-10-27"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "17:00",
+          "endTime": "20:00",
+          "description": "Live music night with $9 cocktails",
+          "drinkPrice": 9.0,
+          "avgCostPerPerson": 22.0,
+          "lastUpdated": "2026-10-27"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "17:00",
+          "endTime": "20:00",
+          "description": "Live music night with $9 cocktails",
+          "drinkPrice": 9.0,
+          "avgCostPerPerson": 22.0,
+          "lastUpdated": "2026-10-27"
+        }
+      ]
+    },
+    {
+      "id": "r07",
+      "name": "Spadina Sake Bar",
+      "address": "12 Sample Cres, Toronto",
+      "latitude": 43.6489,
+      "longitude": -79.3954,
+      "cuisine": "Japanese",
+      "tags": [
+        "izakaya",
+        "sake",
+        "small plates"
+      ],
+      "opensAt": "17:00",
+      "closesAt": "00:00",
+      "lastUpdated": "2026-10-15",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$6 sake and $4 edamame",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-10-15"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$6 sake and $4 edamame",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-10-15"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$6 sake and $4 edamame",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-10-15"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$6 sake and $4 edamame",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": "r08",
+      "name": "Harbour Patio Co.",
+      "address": "1 Sample Quay, Toronto",
+      "latitude": 43.6389,
+      "longitude": -79.3816,
+      "cuisine": "Seafood",
+      "tags": [
+        "patio",
+        "waterfront",
+        "oysters"
+      ],
+      "opensAt": "11:00",
+      "closesAt": "23:00",
+      "lastUpdated": "2026-09-28",
+      "deals": [
+        {
+          "day": "FRIDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$2 oysters and $7 white wine",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 21.0,
+          "lastUpdated": "2026-09-28"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$2 oysters and $7 white wine",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 21.0,
+          "lastUpdated": "2026-09-28"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$2 oysters and $7 white wine",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 21.0,
+          "lastUpdated": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "r09",
+      "name": "Distillery Draft House",
+      "address": "9 Sample Lane, Toronto",
+      "latitude": 43.6503,
+      "longitude": -79.3596,
+      "cuisine": "Brewpub",
+      "tags": [
+        "craft beer",
+        "patio",
+        "pub food"
+      ],
+      "opensAt": "11:00",
+      "closesAt": "00:00",
+      "lastUpdated": null,
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$6 craft pints",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": null
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$6 craft pints",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": null
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$6 craft pints",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": null
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$6 craft pints",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": null
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$6 craft pints",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": null
+        }
+      ]
+    },
+    {
+      "id": "r10",
+      "name": "Liberty Social",
+      "address": "60 Sample Dr, Toronto",
+      "latitude": 43.6377,
+      "longitude": -79.4208,
+      "cuisine": "Gastropub",
+      "tags": [
+        "live music",
+        "trivia night"
+      ],
+      "opensAt": "11:00",
+      "closesAt": "02:00",
+      "lastUpdated": "2026-10-22",
+      "deals": [
+        {
+          "day": "WEDNESDAY",
+          "startTime": "18:00",
+          "endTime": "21:00",
+          "description": "Trivia night with $6 pints",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 15.0,
+          "lastUpdated": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": "r11",
+      "name": "Ossington Wine Room",
+      "address": "18 Sample Pl, Toronto",
+      "latitude": 43.6477,
+      "longitude": -79.4195,
+      "cuisine": "Wine bar",
+      "tags": [
+        "wine",
+        "cheese",
+        "date night"
+      ],
+      "opensAt": "16:00",
+      "closesAt": "00:00",
+      "lastUpdated": "2026-10-26",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$7 wine and $10 cheese plate",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-10-26"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$7 wine and $10 cheese plate",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-10-26"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$7 wine and $10 cheese plate",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-10-26"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$7 wine and $10 cheese plate",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-10-26"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$7 wine and $10 cheese plate",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-10-26"
+        }
+      ]
+    },
+    {
+      "id": "r12",
+      "name": "Bloor Burger Bar",
+      "address": "3 Sample Way, Toronto",
+      "latitude": 43.6709,
+      "longitude": -79.3857,
+      "cuisine": "Burgers",
+      "tags": [
+        "sports bar",
+        "big screens",
+        "truffle fries"
+      ],
+      "opensAt": "11:00",
+      "closesAt": "00:00",
+      "lastUpdated": "2026-10-29",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 pints, $8 burger, $6 truffle fries",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 13.0,
+          "lastUpdated": "2026-10-29"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 pints, $8 burger, $6 truffle fries",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 13.0,
+          "lastUpdated": "2026-10-29"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 pints, $8 burger, $6 truffle fries",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 13.0,
+          "lastUpdated": "2026-10-29"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 pints, $8 burger, $6 truffle fries",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 13.0,
+          "lastUpdated": "2026-10-29"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 pints, $8 burger, $6 truffle fries",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 13.0,
+          "lastUpdated": "2026-10-29"
+        }
+      ]
+    },
+    {
+      "id": "r13",
+      "name": "St. Andrew Cocktail Co.",
+      "address": "14 Sample St, Toronto",
+      "latitude": 43.6479,
+      "longitude": -79.3846,
+      "cuisine": "Cocktail bar",
+      "tags": [
+        "cocktails",
+        "craft cocktails",
+        "date night"
+      ],
+      "opensAt": "16:00",
+      "closesAt": "01:00",
+      "lastUpdated": "2026-10-25",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$9 signature cocktails",
+          "drinkPrice": 9.0,
+          "avgCostPerPerson": 24.0,
+          "lastUpdated": "2026-10-25"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$9 signature cocktails",
+          "drinkPrice": 9.0,
+          "avgCostPerPerson": 24.0,
+          "lastUpdated": "2026-10-25"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$9 signature cocktails",
+          "drinkPrice": 9.0,
+          "avgCostPerPerson": 24.0,
+          "lastUpdated": "2026-10-25"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$9 signature cocktails",
+          "drinkPrice": 9.0,
+          "avgCostPerPerson": 24.0,
+          "lastUpdated": "2026-10-25"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$9 signature cocktails",
+          "drinkPrice": 9.0,
+          "avgCostPerPerson": 24.0,
+          "lastUpdated": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "r14",
+      "name": "Chinatown Dumpling Bar",
+      "address": "88 Sample Ave, Toronto",
+      "latitude": 43.6531,
+      "longitude": -79.3979,
+      "cuisine": "Chinese",
+      "tags": [
+        "dumplings",
+        "casual"
+      ],
+      "opensAt": "11:00",
+      "closesAt": "22:00",
+      "lastUpdated": "2026-10-12",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$4 dumplings and $5 beer",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 11.0,
+          "lastUpdated": "2026-10-12"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$4 dumplings and $5 beer",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 11.0,
+          "lastUpdated": "2026-10-12"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$4 dumplings and $5 beer",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 11.0,
+          "lastUpdated": "2026-10-12"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$4 dumplings and $5 beer",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 11.0,
+          "lastUpdated": "2026-10-12"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$4 dumplings and $5 beer",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 11.0,
+          "lastUpdated": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "r15",
+      "name": "Finch Corner Pub",
+      "address": "700 Sample Rd, Toronto",
+      "latitude": 43.7807,
+      "longitude": -79.4152,
+      "cuisine": "Pub",
+      "tags": [
+        "sports bar",
+        "patio",
+        "wings"
+      ],
+      "opensAt": "11:00",
+      "closesAt": "01:00",
+      "lastUpdated": "2026-10-19",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$5 beer and $8 wings",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 12.0,
+          "lastUpdated": "2026-10-19"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$5 beer and $8 wings",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 12.0,
+          "lastUpdated": "2026-10-19"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$5 beer and $8 wings",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 12.0,
+          "lastUpdated": "2026-10-19"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$5 beer and $8 wings",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 12.0,
+          "lastUpdated": "2026-10-19"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$5 beer and $8 wings",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 12.0,
+          "lastUpdated": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "id": "r16",
+      "name": "Mezze Room",
+      "address": "41 Sample St, Toronto",
+      "latitude": null,
+      "longitude": null,
+      "cuisine": "Mediterranean",
+      "tags": [
+        "small plates",
+        "patio"
+      ],
+      "opensAt": "12:00",
+      "closesAt": "23:00",
+      "lastUpdated": "2026-10-21",
+      "deals": [
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$6 mezze plates",
+          "drinkPrice": null,
+          "avgCostPerPerson": 13.0,
+          "lastUpdated": "2026-10-21"
+        }
+      ]
+    },
+    {
+      "id": "r17",
+      "name": "Queen West Rooftop",
+      "address": "200 Sample St, Toronto",
+      "latitude": 43.6496,
+      "longitude": -79.3922,
+      "cuisine": "Rooftop bar",
+      "tags": [
+        "rooftop",
+        "cocktails",
+        "patio"
+      ],
+      "opensAt": "16:00",
+      "closesAt": "01:00",
+      "lastUpdated": "2026-10-31",
+      "deals": [
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$8 spritz and $6 fries",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-10-31"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$8 spritz and $6 fries",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-10-31"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$8 spritz and $6 fries",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-10-31"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "16:00",
+          "endTime": "19:00",
+          "description": "$8 spritz and $6 fries",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "r18",
+      "name": "Church Street Tapas",
+      "address": "25 Sample Ave, Toronto",
+      "latitude": 43.6623,
+      "longitude": -79.3795,
+      "cuisine": "Spanish",
+      "tags": [
+        "tapas",
+        "sangria",
+        "patio"
+      ],
+      "opensAt": "12:00",
+      "closesAt": "23:00",
+      "lastUpdated": "2026-10-17",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$6 sangria and $5 tapas",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 14.0,
+          "lastUpdated": "2026-10-17"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$6 sangria and $5 tapas",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 14.0,
+          "lastUpdated": "2026-10-17"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$6 sangria and $5 tapas",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 14.0,
+          "lastUpdated": "2026-10-17"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$6 sangria and $5 tapas",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 14.0,
+          "lastUpdated": "2026-10-17"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$6 sangria and $5 tapas",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 14.0,
+          "lastUpdated": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "r19",
+      "name": "GRETA Bar YYZ",
+      "address": "590 King St W, Toronto, ON M5V 2N2",
+      "latitude": 43.6441,
+      "longitude": -79.4017,
+      "cuisine": "Arcade bar",
+      "tags": [
+        "arcade",
+        "games",
+        "entertainment district",
+        "late night",
+        "cocktails",
+        "beer",
+        "wine",
+        "tequila",
+        "shots",
+        "highballs"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$7 shafts, highballs, beer, Corona bottles, house wine and Hornitos tequila shots; $10 Casamigos Blanco; $12 handcrafted cocktails; $5 Red Bull; select food specials",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "MONDAY",
+          "startTime": "22:00",
+          "endTime": "02:00",
+          "description": "$7 shafts, highballs, beer, Corona bottles, house wine and Hornitos tequila shots; $10 Casamigos Blanco; $12 handcrafted cocktails; $5 Red Bull; select food specials; unlimited arcade game play $20 for 3 hours",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$7 shafts, highballs, beer, Corona bottles, house wine and Hornitos tequila shots; $10 Casamigos Blanco; $12 handcrafted cocktails; $5 Red Bull; select food specials",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "22:00",
+          "endTime": "02:00",
+          "description": "$7 shafts, highballs, beer, Corona bottles, house wine and Hornitos tequila shots; $10 Casamigos Blanco; $12 handcrafted cocktails; $5 Red Bull; select food specials; unlimited arcade game play $20 for 3 hours",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$7 shafts, highballs, beer, Corona bottles, house wine and Hornitos tequila shots; $10 Casamigos Blanco; $12 handcrafted cocktails; $5 Red Bull; select food specials",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "22:00",
+          "endTime": "02:00",
+          "description": "$7 shafts, highballs, beer, Corona bottles, house wine and Hornitos tequila shots; $10 Casamigos Blanco; $12 handcrafted cocktails; $5 Red Bull; select food specials; unlimited arcade game play $20 for 3 hours",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$7 shafts, highballs, beer, Corona bottles, house wine and Hornitos tequila shots; $10 Casamigos Blanco; $12 handcrafted cocktails; $5 Red Bull; select food specials",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "22:00",
+          "endTime": "02:00",
+          "description": "$7 shafts, highballs, beer, Corona bottles, house wine and Hornitos tequila shots; $10 Casamigos Blanco; $12 handcrafted cocktails; $5 Red Bull; select food specials; unlimited arcade game play $20 for 3 hours",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$7 shafts, highballs, beer, Corona bottles, house wine and Hornitos tequila shots; $10 Casamigos Blanco; $12 handcrafted cocktails; $5 Red Bull; select food specials",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r20",
+      "name": "Gabby's - King West",
+      "address": "309 King St W, Toronto, ON M5V 1J5",
+      "latitude": 43.6456,
+      "longitude": -79.3911,
+      "cuisine": "Sports bar",
+      "tags": [
+        "sports",
+        "outdoor",
+        "patio",
+        "entertainment district",
+        "beer",
+        "wine",
+        "nachos",
+        "poutine",
+        "chicken tenders",
+        "pub food"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$5 draft beer, house wine and bar rail drinks; food: garlic cheese fingers $7, poutine $10, spinach & artichoke dip $11, snack pan nachos $13, chicken tenders $14",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "MONDAY",
+          "startTime": "21:00",
+          "endTime": "00:00",
+          "description": "$5 draft beer, house wine and bar rail drinks; food: garlic cheese fingers $7, poutine $10, spinach & artichoke dip $11, snack pan nachos $13, chicken tenders $14",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$5 draft beer, house wine and bar rail drinks; food: garlic cheese fingers $7, poutine $10, spinach & artichoke dip $11, snack pan nachos $13, chicken tenders $14",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "21:00",
+          "endTime": "00:00",
+          "description": "$5 draft beer, house wine and bar rail drinks; food: garlic cheese fingers $7, poutine $10, spinach & artichoke dip $11, snack pan nachos $13, chicken tenders $14",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$5 draft beer, house wine and bar rail drinks; food: garlic cheese fingers $7, poutine $10, spinach & artichoke dip $11, snack pan nachos $13, chicken tenders $14",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "21:00",
+          "endTime": "00:00",
+          "description": "$5 draft beer, house wine and bar rail drinks; food: garlic cheese fingers $7, poutine $10, spinach & artichoke dip $11, snack pan nachos $13, chicken tenders $14",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$5 draft beer, house wine and bar rail drinks; food: garlic cheese fingers $7, poutine $10, spinach & artichoke dip $11, snack pan nachos $13, chicken tenders $14",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "21:00",
+          "endTime": "00:00",
+          "description": "$5 draft beer, house wine and bar rail drinks; food: garlic cheese fingers $7, poutine $10, spinach & artichoke dip $11, snack pan nachos $13, chicken tenders $14",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$5 draft beer, house wine and bar rail drinks; food: garlic cheese fingers $7, poutine $10, spinach & artichoke dip $11, snack pan nachos $13, chicken tenders $14",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "21:00",
+          "endTime": "00:00",
+          "description": "$5 draft beer, house wine and bar rail drinks; food: garlic cheese fingers $7, poutine $10, spinach & artichoke dip $11, snack pan nachos $13, chicken tenders $14",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r21",
+      "name": "Gusto 101",
+      "address": "101 Portland St, Toronto, ON M5V 2N3",
+      "latitude": 43.6455,
+      "longitude": -79.4006,
+      "cuisine": "Italian",
+      "tags": [
+        "rooftop",
+        "entertainment district",
+        "date night",
+        "cocktails",
+        "spritz",
+        "wine",
+        "beer",
+        "pizza",
+        "pasta",
+        "burgers",
+        "italian"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "description": "$13 cocktails (Jalapeno Margarita, Assisi Spritz, Cosmopolitan, Spritz Veneziano); $6 Peroni lager; $7 red or white wine; food: focaccia $4, polenta fritta $6, carpaccio $10, margherita or pepperoni pizza $15, mafalde ai funghi $16, rigatoni alla gricia $17, Gusto Americano hamburger $18, Peroni board for two $25",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "description": "$13 cocktails (Jalapeno Margarita, Assisi Spritz, Cosmopolitan, Spritz Veneziano); $6 Peroni lager; $7 red or white wine; food: focaccia $4, polenta fritta $6, carpaccio $10, margherita or pepperoni pizza $15, mafalde ai funghi $16, rigatoni alla gricia $17, Gusto Americano hamburger $18, Peroni board for two $25",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "description": "$13 cocktails (Jalapeno Margarita, Assisi Spritz, Cosmopolitan, Spritz Veneziano); $6 Peroni lager; $7 red or white wine; food: focaccia $4, polenta fritta $6, carpaccio $10, margherita or pepperoni pizza $15, mafalde ai funghi $16, rigatoni alla gricia $17, Gusto Americano hamburger $18, Peroni board for two $25",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "description": "$13 cocktails (Jalapeno Margarita, Assisi Spritz, Cosmopolitan, Spritz Veneziano); $6 Peroni lager; $7 red or white wine; food: focaccia $4, polenta fritta $6, carpaccio $10, margherita or pepperoni pizza $15, mafalde ai funghi $16, rigatoni alla gricia $17, Gusto Americano hamburger $18, Peroni board for two $25",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "description": "$13 cocktails (Jalapeno Margarita, Assisi Spritz, Cosmopolitan, Spritz Veneziano); $6 Peroni lager; $7 red or white wine; food: focaccia $4, polenta fritta $6, carpaccio $10, margherita or pepperoni pizza $15, mafalde ai funghi $16, rigatoni alla gricia $17, Gusto Americano hamburger $18, Peroni board for two $25",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r22",
+      "name": "Pizzeria Libretto - University",
+      "address": "155 University Ave, Toronto, ON M5H 3B7",
+      "latitude": 43.6488,
+      "longitude": -79.3862,
+      "cuisine": "Pizzeria",
+      "tags": [
+        "italian",
+        "pizza",
+        "bruschetta",
+        "focaccia",
+        "dips",
+        "aperol spritz",
+        "cocktails",
+        "beer",
+        "wine",
+        "financial district"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "14:00",
+          "endTime": "18:00",
+          "description": "$8 Aperol spritz, $6 beer, $7 wine; food: focaccia & olives $5, bruschetta & chips $8, ricotta dip & chips $9",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "14:00",
+          "endTime": "18:00",
+          "description": "$8 Aperol spritz, $6 beer, $7 wine; food: focaccia & olives $5, bruschetta & chips $8, ricotta dip & chips $9",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "14:00",
+          "endTime": "18:00",
+          "description": "$8 Aperol spritz, $6 beer, $7 wine; food: focaccia & olives $5, bruschetta & chips $8, ricotta dip & chips $9",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "14:00",
+          "endTime": "18:00",
+          "description": "$8 Aperol spritz, $6 beer, $7 wine; food: focaccia & olives $5, bruschetta & chips $8, ricotta dip & chips $9",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "14:00",
+          "endTime": "18:00",
+          "description": "$8 Aperol spritz, $6 beer, $7 wine; food: focaccia & olives $5, bruschetta & chips $8, ricotta dip & chips $9",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": 17.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r23",
+      "name": "Voodoo Child Cocktail & Espresso Bar",
+      "address": "388 College St, Toronto, ON M5T 1S7",
+      "latitude": 43.6576,
+      "longitude": -79.404,
+      "cuisine": "Cocktail bar",
+      "tags": [
+        "cocktails",
+        "espresso",
+        "outdoor",
+        "patio",
+        "beer",
+        "lager",
+        "wine",
+        "shots",
+        "cocktail bar"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$12 cocktails and wine by the glass, $5 lager, $5 Blackbird shots",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$12 cocktails and wine by the glass, $5 lager, $5 Blackbird shots",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$12 cocktails and wine by the glass, $5 lager, $5 Blackbird shots",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$12 cocktails and wine by the glass, $5 lager, $5 Blackbird shots",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$12 cocktails and wine by the glass, $5 lager, $5 Blackbird shots",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$12 cocktails and wine by the glass, $5 lager, $5 Blackbird shots",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$12 cocktails and wine by the glass, $5 lager, $5 Blackbird shots",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r24",
+      "name": "The Jason George",
+      "address": "100 Front St E, Toronto, ON M5A 1E1",
+      "latitude": 43.6498,
+      "longitude": -79.3735,
+      "cuisine": "Irish pub",
+      "tags": [
+        "irish pub",
+        "pub",
+        "patio",
+        "brunch",
+        "weekend",
+        "bloody caesar",
+        "mimosa",
+        "cocktails",
+        "moss park"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "SATURDAY",
+          "startTime": "11:00",
+          "endTime": "14:30",
+          "description": "$6 Bloody Caesars and mimosas",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "11:00",
+          "endTime": "14:30",
+          "description": "$6 Bloody Caesars and mimosas",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r25",
+      "name": "Cibo Wine Bar Yorkville",
+      "address": "133 Yorkville Ave, Toronto, ON M5R 1C4",
+      "latitude": 43.6711,
+      "longitude": -79.3935,
+      "cuisine": "Wine bar",
+      "tags": [
+        "wine bar",
+        "outdoor",
+        "patio",
+        "cocktails",
+        "spritz",
+        "espresso martini",
+        "margarita",
+        "negroni",
+        "beer",
+        "wine",
+        "tequila",
+        "vodka",
+        "bottle service",
+        "late night",
+        "yorkville",
+        "annex"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "THURSDAY",
+          "startTime": "22:00",
+          "endTime": "02:00",
+          "description": "$10 cocktails (Aperol Spritz, Espresso Martini, Margarita, Highballs); $12 Old Fashioned and Negroni; $5 Stella Artois pint and glass of house red or white wine; $7 house tequila shot; $25 bottle of house wine; bottle service $150 (Tromba Tequila, Ketel One Vodka)",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "22:00",
+          "endTime": "02:00",
+          "description": "$10 cocktails (Aperol Spritz, Espresso Martini, Margarita, Highballs); $12 Old Fashioned and Negroni; $5 Stella Artois pint and glass of house red or white wine; $7 house tequila shot; $25 bottle of house wine; bottle service $150 (Tromba Tequila, Ketel One Vodka)",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "22:00",
+          "endTime": "02:00",
+          "description": "$10 cocktails (Aperol Spritz, Espresso Martini, Margarita, Highballs); $12 Old Fashioned and Negroni; $5 Stella Artois pint and glass of house red or white wine; $7 house tequila shot; $25 bottle of house wine; bottle service $150 (Tromba Tequila, Ketel One Vodka)",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r26",
+      "name": "Shoeless Joe's Sports Grill",
+      "address": "249 Queens Quay W, Toronto, ON M5J 1B5",
+      "latitude": 43.6386,
+      "longitude": -79.3945,
+      "cuisine": "Sports bar",
+      "tags": [
+        "sports",
+        "outdoor",
+        "patio",
+        "wings",
+        "chicken",
+        "burger",
+        "wrap",
+        "dumplings",
+        "spinach dip",
+        "waffles",
+        "beer",
+        "wine",
+        "mixed drinks",
+        "harbourfront",
+        "cityplace",
+        "late night"
+      ],
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 domestic draught (16 oz) and bar rail mixed drinks; bottles of wine half price; $10 food: Nashville chicken & waffles, Clutch Pickle Crunch, all-star spinach dip, wagyu crispy dumplings, Joe's famous chicken wings (1 lb), buffalo chicken wrap, classic smashed burger",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "MONDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "$5 domestic draught (16 oz) and bar rail mixed drinks; bottles of wine half price; $10 food: Nashville chicken & waffles, Clutch Pickle Crunch, all-star spinach dip, wagyu crispy dumplings, Joe's famous chicken wings (1 lb), buffalo chicken wrap, classic smashed burger",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 domestic draught (16 oz) and bar rail mixed drinks; bottles of wine half price; $10 food: Nashville chicken & waffles, Clutch Pickle Crunch, all-star spinach dip, wagyu crispy dumplings, Joe's famous chicken wings (1 lb), buffalo chicken wrap, classic smashed burger",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "$5 domestic draught (16 oz) and bar rail mixed drinks; bottles of wine half price; $10 food: Nashville chicken & waffles, Clutch Pickle Crunch, all-star spinach dip, wagyu crispy dumplings, Joe's famous chicken wings (1 lb), buffalo chicken wrap, classic smashed burger",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 domestic draught (16 oz) and bar rail mixed drinks; bottles of wine half price; $10 food: Nashville chicken & waffles, Clutch Pickle Crunch, all-star spinach dip, wagyu crispy dumplings, Joe's famous chicken wings (1 lb), buffalo chicken wrap, classic smashed burger",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "$5 domestic draught (16 oz) and bar rail mixed drinks; bottles of wine half price; $10 food: Nashville chicken & waffles, Clutch Pickle Crunch, all-star spinach dip, wagyu crispy dumplings, Joe's famous chicken wings (1 lb), buffalo chicken wrap, classic smashed burger",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 domestic draught (16 oz) and bar rail mixed drinks; bottles of wine half price; $10 food: Nashville chicken & waffles, Clutch Pickle Crunch, all-star spinach dip, wagyu crispy dumplings, Joe's famous chicken wings (1 lb), buffalo chicken wrap, classic smashed burger",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "$5 domestic draught (16 oz) and bar rail mixed drinks; bottles of wine half price; $10 food: Nashville chicken & waffles, Clutch Pickle Crunch, all-star spinach dip, wagyu crispy dumplings, Joe's famous chicken wings (1 lb), buffalo chicken wrap, classic smashed burger",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 domestic draught (16 oz) and bar rail mixed drinks; bottles of wine half price; $10 food: Nashville chicken & waffles, Clutch Pickle Crunch, all-star spinach dip, wagyu crispy dumplings, Joe's famous chicken wings (1 lb), buffalo chicken wrap, classic smashed burger",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "$5 domestic draught (16 oz) and bar rail mixed drinks; bottles of wine half price; $10 food: Nashville chicken & waffles, Clutch Pickle Crunch, all-star spinach dip, wagyu crispy dumplings, Joe's famous chicken wings (1 lb), buffalo chicken wrap, classic smashed burger",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10"
+    },
+    {
+      "id": "r27",
+      "name": "Bridgette Bar Toronto",
+      "address": "423 Wellington St W, Toronto, ON M5V 1E7",
+      "latitude": 43.6431,
+      "longitude": -79.399,
+      "cuisine": "Bar & restaurant",
+      "tags": [
+        "patio",
+        "entertainment district",
+        "cocktails",
+        "beer",
+        "wine",
+        "pizza",
+        "fries",
+        "hummus",
+        "garlic bread",
+        "olives",
+        "cashews"
+      ],
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 rail drinks, $12 select cocktails, $6 select beer, select wine pours $10 (5 oz) or $15 (8 oz), select wine bottles $40; food: fries $6, hummus chips $6, garlic bread $8, cashews $9, roasted olives $9, margherita pizza $10",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 rail drinks, $12 select cocktails, $6 select beer, select wine pours $10 (5 oz) or $15 (8 oz), select wine bottles $40; food: fries $6, hummus chips $6, garlic bread $8, cashews $9, roasted olives $9, margherita pizza $10",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 rail drinks, $12 select cocktails, $6 select beer, select wine pours $10 (5 oz) or $15 (8 oz), select wine bottles $40; food: fries $6, hummus chips $6, garlic bread $8, cashews $9, roasted olives $9, margherita pizza $10",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 rail drinks, $12 select cocktails, $6 select beer, select wine pours $10 (5 oz) or $15 (8 oz), select wine bottles $40; food: fries $6, hummus chips $6, garlic bread $8, cashews $9, roasted olives $9, margherita pizza $10",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 rail drinks, $12 select cocktails, $6 select beer, select wine pours $10 (5 oz) or $15 (8 oz), select wine bottles $40; food: fries $6, hummus chips $6, garlic bread $8, cashews $9, roasted olives $9, margherita pizza $10",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 rail drinks, $12 select cocktails, $6 select beer, select wine pours $10 (5 oz) or $15 (8 oz), select wine bottles $40; food: fries $6, hummus chips $6, garlic bread $8, cashews $9, roasted olives $9, margherita pizza $10",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 rail drinks, $12 select cocktails, $6 select beer, select wine pours $10 (5 oz) or $15 (8 oz), select wine bottles $40; food: fries $6, hummus chips $6, garlic bread $8, cashews $9, roasted olives $9, margherita pizza $10",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 16.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10"
+    },
+    {
+      "id": "r28",
+      "name": "Bar Volo",
+      "address": "17 St Nicholas St, Toronto, ON M4Y 3G4",
+      "latitude": 43.6671,
+      "longitude": -79.3861,
+      "cuisine": "Bar & restaurant",
+      "tags": [
+        "patio",
+        "cocktails",
+        "aperitivo",
+        "negroni",
+        "spritz",
+        "sbagliato",
+        "beer",
+        "lager",
+        "bubbles",
+        "olives",
+        "italian",
+        "bay-cloverhill"
+      ],
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$12 Spaghett and Americano Perfecto, $13 Sbagliato, $14 spritz and negroni; $7 Birra (Volo lager tall can); $12 frizzante (house bubbles, 5 oz); aperitivo trio $12 (chips, taralli, olives)",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 26.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$12 Spaghett and Americano Perfecto, $13 Sbagliato, $14 spritz and negroni; $7 Birra (Volo lager tall can); $12 frizzante (house bubbles, 5 oz); aperitivo trio $12 (chips, taralli, olives)",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 26.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$12 Spaghett and Americano Perfecto, $13 Sbagliato, $14 spritz and negroni; $7 Birra (Volo lager tall can); $12 frizzante (house bubbles, 5 oz); aperitivo trio $12 (chips, taralli, olives)",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 26.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$12 Spaghett and Americano Perfecto, $13 Sbagliato, $14 spritz and negroni; $7 Birra (Volo lager tall can); $12 frizzante (house bubbles, 5 oz); aperitivo trio $12 (chips, taralli, olives)",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 26.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$12 Spaghett and Americano Perfecto, $13 Sbagliato, $14 spritz and negroni; $7 Birra (Volo lager tall can); $12 frizzante (house bubbles, 5 oz); aperitivo trio $12 (chips, taralli, olives)",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 26.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10"
+    },
+    {
+      "id": "r29",
+      "name": "Bellwoods Brewery",
+      "address": "124 Ossington Ave, Toronto, ON M6J 2Z5",
+      "latitude": 43.6479,
+      "longitude": -79.4198,
+      "cuisine": "Brewery",
+      "tags": [
+        "brewery",
+        "craft beer",
+        "outdoor",
+        "patio",
+        "cocktails",
+        "beer",
+        "wine",
+        "snacks",
+        "ossington"
+      ],
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$7 select cocktails, beer and wine; $7 snacks",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 21.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$7 select cocktails, beer and wine; $7 snacks",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 21.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$7 select cocktails, beer and wine; $7 snacks",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 21.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$7 select cocktails, beer and wine; $7 snacks",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 21.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "description": "$7 select cocktails, beer and wine; $7 snacks",
+          "drinkPrice": 7.0,
+          "avgCostPerPerson": 21.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10"
+    },
+    {
+      "id": "r30",
+      "name": "Bar Le Germain",
+      "address": "75 Bremner Blvd, Toronto, ON M5J 0A7",
+      "latitude": 43.643,
+      "longitude": -79.3855,
+      "cuisine": "Cocktail bar",
+      "tags": [
+        "cocktail bar",
+        "outdoor",
+        "patio",
+        "entertainment district",
+        "cocktails",
+        "highballs",
+        "espresso martini",
+        "beer",
+        "wine",
+        "wings",
+        "poutine"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$8 rail highballs (vodka, tequila, white rum, whiskey or gin); $14 espresso martini; $10 pints (Ronin Japanese rice lager, Ellesmere ESB amber ale); $11 featured 5 oz wine; food: Kyoto glazed wings $12, tater tots poutine $11",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 27.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$8 rail highballs (vodka, tequila, white rum, whiskey or gin); $14 espresso martini; $10 pints (Ronin Japanese rice lager, Ellesmere ESB amber ale); $11 featured 5 oz wine; food: Kyoto glazed wings $12, tater tots poutine $11",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 27.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$8 rail highballs (vodka, tequila, white rum, whiskey or gin); $14 espresso martini; $10 pints (Ronin Japanese rice lager, Ellesmere ESB amber ale); $11 featured 5 oz wine; food: Kyoto glazed wings $12, tater tots poutine $11",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 27.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$8 rail highballs (vodka, tequila, white rum, whiskey or gin); $14 espresso martini; $10 pints (Ronin Japanese rice lager, Ellesmere ESB amber ale); $11 featured 5 oz wine; food: Kyoto glazed wings $12, tater tots poutine $11",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 27.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$8 rail highballs (vodka, tequila, white rum, whiskey or gin); $14 espresso martini; $10 pints (Ronin Japanese rice lager, Ellesmere ESB amber ale); $11 featured 5 oz wine; food: Kyoto glazed wings $12, tater tots poutine $11",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 27.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$8 rail highballs (vodka, tequila, white rum, whiskey or gin); $14 espresso martini; $10 pints (Ronin Japanese rice lager, Ellesmere ESB amber ale); $11 featured 5 oz wine; food: Kyoto glazed wings $12, tater tots poutine $11",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 27.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$8 rail highballs (vodka, tequila, white rum, whiskey or gin); $14 espresso martini; $10 pints (Ronin Japanese rice lager, Ellesmere ESB amber ale); $11 featured 5 oz wine; food: Kyoto glazed wings $12, tater tots poutine $11",
+          "drinkPrice": 8.0,
+          "avgCostPerPerson": 27.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r31",
+      "name": "Cactus Club Cafe",
+      "address": "77 Adelaide St W, Toronto, ON M5X 1C1",
+      "latitude": 43.6488,
+      "longitude": -79.3835,
+      "cuisine": "Bar & restaurant",
+      "tags": [
+        "rooftop",
+        "financial district",
+        "cocktails",
+        "frose",
+        "margarita",
+        "beer",
+        "wine",
+        "burger",
+        "fries",
+        "sushi",
+        "tacos",
+        "chicken",
+        "steak",
+        "salad"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "MONDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "21:00",
+          "endTime": "02:00",
+          "description": "cocktails: $5 Sunset Soda or Frose Sunset Soda, $9 Bellini, $10 classic margarita, $11 Frose or Old Fashioned; beer: $5 Longboard lager, $6.50 Fairweather IPA, $8.25 Heineken; wine: $6 (6 oz) or $9 (9 oz) red or white, Monvin cabernet or pinot grigio $8 (6 oz) / $12 (9 oz); food: Niner smash burger $9, truffle fries $9, avocado dip $9, tuna temaki $10, avocado kale salad $13, hot chicken & pickles $16, prawn crunch roll $16, salmon aburi $17, chipotle chicken tacos $17, Cajun chicken sandwich $18, blackened Creole chicken $28, steak frites $32",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 19.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r32",
+      "name": "Bobby Bermuda's Sunset Bar",
+      "address": "235 Queens Quay W, Toronto, ON M5J 2G8",
+      "latitude": 43.6384,
+      "longitude": -79.3935,
+      "cuisine": "Bar & restaurant",
+      "tags": [
+        "patio",
+        "harbourfront",
+        "cityplace",
+        "fireball",
+        "margaritas",
+        "beer",
+        "wine"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 fireball, $8 margs, $6 beers, $7 wine glasses",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 fireball, $8 margs, $6 beers, $7 wine glasses",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 fireball, $8 margs, $6 beers, $7 wine glasses",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 fireball, $8 margs, $6 beers, $7 wine glasses",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 fireball, $8 margs, $6 beers, $7 wine glasses",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r33",
+      "name": "Crown & Dragon",
+      "address": "890 Yonge St, Toronto, ON M4W 3P4",
+      "latitude": 43.6745,
+      "longitude": -79.3888,
+      "cuisine": "Sports bar",
+      "tags": [
+        "sports",
+        "outdoor",
+        "patio",
+        "annex",
+        "beer",
+        "wine",
+        "fries",
+        "pizza",
+        "bruschetta",
+        "calamari",
+        "spinach dip",
+        "spring rolls",
+        "korean bbq"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 MGD and Miller Lite bottles; $6 domestic pints and house wine glasses; food: truffle parmesan fries $8, yam fries $8, bruschetta $8, spring rolls $8, personal pizza $8 (vegetarian or pepperoni), peameal on a bun $10, Korean fried cauliflower $12, spinach dip $12, calamari $12, Korean BBQ $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 MGD and Miller Lite bottles; $6 domestic pints and house wine glasses; food: truffle parmesan fries $8, yam fries $8, bruschetta $8, spring rolls $8, personal pizza $8 (vegetarian or pepperoni), peameal on a bun $10, Korean fried cauliflower $12, spinach dip $12, calamari $12, Korean BBQ $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 MGD and Miller Lite bottles; $6 domestic pints and house wine glasses; food: truffle parmesan fries $8, yam fries $8, bruschetta $8, spring rolls $8, personal pizza $8 (vegetarian or pepperoni), peameal on a bun $10, Korean fried cauliflower $12, spinach dip $12, calamari $12, Korean BBQ $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 MGD and Miller Lite bottles; $6 domestic pints and house wine glasses; food: truffle parmesan fries $8, yam fries $8, bruschetta $8, spring rolls $8, personal pizza $8 (vegetarian or pepperoni), peameal on a bun $10, Korean fried cauliflower $12, spinach dip $12, calamari $12, Korean BBQ $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 MGD and Miller Lite bottles; $6 domestic pints and house wine glasses; food: truffle parmesan fries $8, yam fries $8, bruschetta $8, spring rolls $8, personal pizza $8 (vegetarian or pepperoni), peameal on a bun $10, Korean fried cauliflower $12, spinach dip $12, calamari $12, Korean BBQ $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "15:00",
+          "endTime": "18:00",
+          "description": "$5 MGD and Miller Lite bottles; $6 domestic pints and house wine glasses; food: truffle parmesan fries $8, yam fries $8, bruschetta $8, spring rolls $8, personal pizza $8 (vegetarian or pepperoni), peameal on a bun $10, Korean fried cauliflower $12, spinach dip $12, calamari $12, Korean BBQ $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 18.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r34",
+      "name": "Bar Reyna",
+      "address": "158 Cumberland St, Toronto, ON M5R 1A8",
+      "latitude": 43.6702,
+      "longitude": -79.3945,
+      "cuisine": "Cocktail bar",
+      "tags": [
+        "cocktail bar",
+        "patio",
+        "annex",
+        "yorkville",
+        "martini",
+        "aperol spritz",
+        "hugo spritz",
+        "wine",
+        "falafel",
+        "croquettes",
+        "frites",
+        "spanish",
+        "mediterranean"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "TUESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$10 martini (gin or vodka), Aperol spritz, Hugo spritz and wine by the glass; food $10: manchego croquettes, falafel bites, Reyna frites",
+          "drinkPrice": 10.0,
+          "avgCostPerPerson": 30.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$10 martini (gin or vodka), Aperol spritz, Hugo spritz and wine by the glass; food $10: manchego croquettes, falafel bites, Reyna frites",
+          "drinkPrice": 10.0,
+          "avgCostPerPerson": 30.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$10 martini (gin or vodka), Aperol spritz, Hugo spritz and wine by the glass; food $10: manchego croquettes, falafel bites, Reyna frites",
+          "drinkPrice": 10.0,
+          "avgCostPerPerson": 30.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$10 martini (gin or vodka), Aperol spritz, Hugo spritz and wine by the glass; food $10: manchego croquettes, falafel bites, Reyna frites",
+          "drinkPrice": 10.0,
+          "avgCostPerPerson": 30.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$10 martini (gin or vodka), Aperol spritz, Hugo spritz and wine by the glass; food $10: manchego croquettes, falafel bites, Reyna frites",
+          "drinkPrice": 10.0,
+          "avgCostPerPerson": 30.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "description": "$10 martini (gin or vodka), Aperol spritz, Hugo spritz and wine by the glass; food $10: manchego croquettes, falafel bites, Reyna frites",
+          "drinkPrice": 10.0,
+          "avgCostPerPerson": 30.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r35",
+      "name": "Score on King",
+      "address": "107 King St E, Toronto, ON M5C 1G6",
+      "latitude": 43.6491,
+      "longitude": -79.3752,
+      "cuisine": "Sports bar",
+      "tags": [
+        "sports",
+        "patio",
+        "downtown",
+        "beer",
+        "wine",
+        "shots",
+        "burger",
+        "pasta",
+        "fries",
+        "pretzels",
+        "cauliflower wings",
+        "spring rolls"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$7.50 Steam Whistle and Beau's pints; $8.50 Peller Cab Merlot or Chardonnay (6 oz); $6.50 bar rail; $5 Jagermeister shot; food: veggie spring rolls $10, truffle fries $11, jumbo pretzels $12, cauliflower wings $14, pesto penne $17, Score burger with fries $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$7.50 Steam Whistle and Beau's pints; $8.50 Peller Cab Merlot or Chardonnay (6 oz); $6.50 bar rail; $5 Jagermeister shot; food: veggie spring rolls $10, truffle fries $11, jumbo pretzels $12, cauliflower wings $14, pesto penne $17, Score burger with fries $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$7.50 Steam Whistle and Beau's pints; $8.50 Peller Cab Merlot or Chardonnay (6 oz); $6.50 bar rail; $5 Jagermeister shot; food: veggie spring rolls $10, truffle fries $11, jumbo pretzels $12, cauliflower wings $14, pesto penne $17, Score burger with fries $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$7.50 Steam Whistle and Beau's pints; $8.50 Peller Cab Merlot or Chardonnay (6 oz); $6.50 bar rail; $5 Jagermeister shot; food: veggie spring rolls $10, truffle fries $11, jumbo pretzels $12, cauliflower wings $14, pesto penne $17, Score burger with fries $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "description": "$7.50 Steam Whistle and Beau's pints; $8.50 Peller Cab Merlot or Chardonnay (6 oz); $6.50 bar rail; $5 Jagermeister shot; food: veggie spring rolls $10, truffle fries $11, jumbo pretzels $12, cauliflower wings $14, pesto penne $17, Score burger with fries $18",
+          "drinkPrice": 5.0,
+          "avgCostPerPerson": 20.0,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r36",
+      "name": "Brazen Head Irish Pub",
+      "address": "165 E Liberty St, Toronto, ON M6K 3K4",
+      "latitude": 43.638,
+      "longitude": -79.419,
+      "cuisine": "Irish pub",
+      "tags": [
+        "irish pub",
+        "pub",
+        "rooftop",
+        "patio",
+        "liberty village",
+        "tap",
+        "beer",
+        "margarita",
+        "wine",
+        "shots"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "TUESDAY",
+          "startTime": "11:30",
+          "endTime": "00:00",
+          "description": "$6 daily tap (20 oz or 32 oz, excluding Irish pours), classic or spicy margarita, daily wine (Peller Estate Chardonnay or Cabernet Merlot) and daily shot",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "11:30",
+          "endTime": "00:00",
+          "description": "$6 daily tap (20 oz or 32 oz, excluding Irish pours), classic or spicy margarita, daily wine (Peller Estate Chardonnay or Cabernet Merlot) and daily shot",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "11:30",
+          "endTime": "00:00",
+          "description": "$6 daily tap (20 oz or 32 oz, excluding Irish pours), classic or spicy margarita, daily wine (Peller Estate Chardonnay or Cabernet Merlot) and daily shot",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "11:30",
+          "endTime": "02:00",
+          "description": "$6 daily tap (20 oz or 32 oz, excluding Irish pours), classic or spicy margarita, daily wine (Peller Estate Chardonnay or Cabernet Merlot) and daily shot",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SATURDAY",
+          "startTime": "10:30",
+          "endTime": "02:00",
+          "description": "$6 daily tap (20 oz or 32 oz, excluding Irish pours), classic or spicy margarita, daily wine (Peller Estate Chardonnay or Cabernet Merlot) and daily shot",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "SUNDAY",
+          "startTime": "10:30",
+          "endTime": "00:00",
+          "description": "$6 daily tap (20 oz or 32 oz, excluding Irish pours), classic or spicy margarita, daily wine (Peller Estate Chardonnay or Cabernet Merlot) and daily shot",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "MONDAY",
+          "startTime": "11:30",
+          "endTime": "00:00",
+          "description": "$6 daily tap (20 oz or 32 oz, excluding Irish pours), classic or spicy margarita, daily wine (Peller Estate Chardonnay or Cabernet Merlot) and daily shot",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "r37",
+      "name": "Aloette Bay",
+      "address": "81 Bay St, 4th Floor, Toronto, ON M5J 0E7",
+      "latitude": 43.6442,
+      "longitude": -79.3794,
+      "cuisine": "Bar & restaurant",
+      "tags": [
+        "financial district",
+        "cocktails",
+        "beer",
+        "wine"
+      ],
+      "opensAt": null,
+      "closesAt": null,
+      "lastUpdated": "2026-11-10",
+      "deals": [
+        {
+          "day": "MONDAY",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "description": "$12 signature cocktails, $6 draft beer, $12 wine by the glass (5 oz)",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "TUESDAY",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "description": "$12 signature cocktails, $6 draft beer, $12 wine by the glass (5 oz)",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "WEDNESDAY",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "description": "$12 signature cocktails, $6 draft beer, $12 wine by the glass (5 oz)",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "THURSDAY",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "description": "$12 signature cocktails, $6 draft beer, $12 wine by the glass (5 oz)",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "day": "FRIDAY",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "description": "$12 signature cocktails, $6 draft beer, $12 wine by the glass (5 oz)",
+          "drinkPrice": 6.0,
+          "avgCostPerPerson": null,
+          "lastUpdated": "2026-11-10"
+        }
+      ]
+    }
+  ]
+}
