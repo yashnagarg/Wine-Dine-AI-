@@ -1,18 +1,24 @@
 package com.winedine;
 
 import com.winedine.config.AppConfig;
+import com.winedine.controller.AgentController;
+import com.winedine.data.DataLoadException;
+import com.winedine.ui.CliApp;
 
-public class Main {
-    public static void main(String[] args) {
+import java.io.IOException;
+
+/** Command-line launcher: {@code java -cp target/classes com.winedine.Main} or {@code mvn exec:java}. */
+public final class Main {
+    private Main() { }
+
+    public static void main(String[] args) throws IOException {
         AppConfig config = AppConfig.load();
-        System.out.println("Wine&Dine AI is starting...");
-
         try {
-            config.require("OPENAI_API_KEY");   // never print the key itself
-            String model = config.require("OPENAI_MODEL");
-            System.out.println("Settings loaded. Model: " + model);
-        } catch (IllegalStateException e) {
-            System.err.println("Error: " + e.getMessage());
+            AgentController controller = AgentController.create(config);
+            CliApp.forConsole(controller).run();
+        } catch (DataLoadException e) {
+            System.err.println("Could not start: " + e.getMessage());
+            System.exit(1);
         }
     }
 }
