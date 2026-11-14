@@ -36,7 +36,7 @@ For a demo without a key, set `USE_MOCK_LLM=true` in `.env` (or leave the key as
 Command line:
 
 ```bash
-mvn -q exec:java -Dexec.mainClass=com.winedine.Main
+mvn -q exec:java "-Dexec.mainClass=com.winedine.Main"
 ```
 
 Graphical interface (JavaFX):
