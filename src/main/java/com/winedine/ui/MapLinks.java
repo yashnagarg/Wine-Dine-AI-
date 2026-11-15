@@ -3,6 +3,8 @@ package com.winedine.ui;
 import com.winedine.model.Restaurant;
 import com.winedine.model.SearchResult;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 
 /**
@@ -31,6 +33,22 @@ public final class MapLinks {
                 "https://www.openstreetmap.org/export/embed.html?bbox=%.6f,%.6f,%.6f,%.6f&layer=mapnik&marker=%.6f,%.6f",
                 r.getLongitude() - d, r.getLatitude() - d, r.getLongitude() + d, r.getLatitude() + d,
                 r.getLatitude(), r.getLongitude());
+    }
+
+    /**
+     * Google Maps search link (no API key needed) for the venue by name and address, so it opens the real
+     * place page. Falls back to the coordinates when the venue has no address.
+     */
+    public static String googleUrl(Restaurant r) {
+        String query;
+        if (!r.getAddress().isBlank()) {
+            query = r.getName() + ", " + r.getAddress();
+        } else if (r.hasValidLocation()) {
+            query = String.format(Locale.ROOT, "%.6f,%.6f", r.getLatitude(), r.getLongitude());
+        } else {
+            query = r.getName() + ", Toronto";
+        }
+        return "https://www.google.com/maps/search/?api=1&query=" + URLEncoder.encode(query, StandardCharsets.UTF_8);
     }
 
     public static String describe(SearchResult result) {

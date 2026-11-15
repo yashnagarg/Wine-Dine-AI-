@@ -68,7 +68,10 @@ public class CliApp {
             case "/list": printResults(controller.getResults()); break;
             case "/show": withResult(number, r -> out.print(ResultFormatter.details(r))); break;
             case "/explain": withResult(number, r -> out.println(controller.explain(number))); break;
-            case "/map": withResult(number, r -> out.println(MapLinks.describe(r))); break;
+            case "/map": withResult(number, r -> {
+                out.println(MapLinks.describe(r));
+                out.println("Google Maps: " + MapLinks.googleUrl(r.getRestaurant()));
+            }); break;
             case "/history": printHistory(); break;
             case "/open": open(number); break;
             case "/refresh": show(controller.refresh()); break;
