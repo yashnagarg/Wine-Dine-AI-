@@ -12,6 +12,13 @@ import java.util.Locale;
 public final class ResultFormatter {
     private ResultFormatter() { }
 
+    /** How fresh the data behind a result is: the deal's date if there is a deal, else the restaurant's. */
+    public static Freshness freshness(SearchResult r) {
+        return r.getHappyHourDeal() == null
+                ? Freshness.of(r.getRestaurant().getLastUpdated(), LocalDate.now())
+                : r.getHappyHourDeal().getFreshness();
+    }
+
     /** One-line summary for a list. */
     public static String line(int number, SearchResult r) {
         Restaurant rest = r.getRestaurant();

@@ -1,0 +1,188 @@
+/* Wine&Dine AI - a Toronto restaurant brochure.
+   Day = parchment paper with ink and maple red. Night (.blueprint) = navy blueprint with cyan lines.
+   Every colour is a variable on .root; .root.blueprint swaps them. */
+.root {
+    -wd-bg: #e9dbb8;
+    -wd-panel: #f6ecd2;
+    -wd-card: #fcf6e6;
+    -wd-card-hover: #fffaee;
+    -wd-card-sel: #fff1cf;
+    -wd-line: #c3a76e;
+    -wd-field: #fffaf0;
+    -wd-text: #3b2a1a;
+    -wd-title: #2b1a0e;
+    -wd-muted: #7b6747;
+    -wd-soft: #5a4630;
+    -wd-accent: #b3262e;
+    -wd-accent-hi: #b3262e;
+    -wd-on-accent: #fff7e6;
+    -wd-btn: #efe0b8;
+    -wd-btn-hover: #e6d29b;
+    -wd-thumb: #cdb27a;
+    -wd-head-a: #f3e4bd;
+    -wd-head-b: #e9d6a6;
+    -wd-icon-bg: #f1e2b8;
+    -wd-ink: #3b2a1a;
+    -wd-red: #b3262e;
+    -wd-ok-bg: #dcebc4;  -wd-ok: #3d6a1f;
+    -wd-warn-bg: #f6dfa6; -wd-warn: #8a5a00;
+    -wd-unk-bg: #e6dcc6; -wd-unk: #6b5d44;
+    -wd-near-bg: #f4cfcf; -wd-near: #9a1f2a;
+    -wd-best-bg: #e2d4ef; -wd-best: #5a3a85;
+
+    -fx-base: #efe0b8;
+    -fx-background: -wd-bg;
+    -fx-control-inner-background: -wd-field;
+    -fx-accent: -wd-accent;
+    -fx-focus-color: -wd-accent;
+    -fx-faint-focus-color: transparent;
+    -fx-font-family: "Constantia", "Georgia", "Palatino Linotype", serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: -wd-text;
+    -fx-background-color: -wd-bg;
+}
+
+.root.blueprint {
+    -wd-bg: #0b1f3a;
+    -wd-panel: #0f2a4d;
+    -wd-card: #123560;
+    -wd-card-hover: #17406f;
+    -wd-card-sel: #1b4a80;
+    -wd-line: #2a6aa6;
+    -wd-field: #0b1f3a;
+    -wd-text: #d6ecff;
+    -wd-title: #ffffff;
+    -wd-muted: #8db6dc;
+    -wd-soft: #b9d7f2;
+    -wd-accent: #ffd36b;
+    -wd-accent-hi: #ffd36b;
+    -wd-on-accent: #0b1f3a;
+    -wd-btn: #14427a;
+    -wd-btn-hover: #1b5598;
+    -wd-thumb: #2a6aa6;
+    -wd-head-a: #0f2a4d;
+    -wd-head-b: #0b1f3a;
+    -wd-icon-bg: #0b1f3a;
+    -wd-ink: #9fe3ff;
+    -wd-red: #ff7b7b;
+    -wd-ok-bg: #0e3b3a;  -wd-ok: #5ff0b0;
+    -wd-warn-bg: #4a3a10; -wd-warn: #ffd36b;
+    -wd-unk-bg: #1a3556; -wd-unk: #9fc0e0;
+    -wd-near-bg: #4a1c2e; -wd-near: #ff8fab;
+    -wd-best-bg: #2a2563; -wd-best: #b9a9ff;
+
+    -fx-base: #14427a;
+}
+
+.label { -fx-text-fill: -wd-text; }
+
+/* line-art icons */
+.glyph { -fx-fill: transparent; -fx-stroke: -wd-ink; -fx-stroke-width: 1.5; -fx-stroke-line-cap: round; -fx-stroke-line-join: round; }
+.glyph-fill { -fx-fill: -wd-red; -fx-stroke: -wd-ink; -fx-stroke-width: 0.8; -fx-stroke-line-join: round; }
+
+/* header: double rule like a brochure masthead */
+.header {
+    -fx-background-color: linear-gradient(to right, -wd-head-a, -wd-head-b);
+    -fx-background-radius: 3;
+    -fx-border-color: -wd-ink;
+    -fx-border-width: 1.5 0 3 0;
+    -fx-padding: 10 20;
+}
+.app-title { -fx-font-family: "Rockwell", "Georgia", serif; -fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: -wd-title; }
+.app-subtitle { -fx-font-family: "Consolas", "Menlo", monospace; -fx-text-fill: -wd-muted; -fx-font-size: 11px; }
+
+/* panels and titles */
+.panel { -fx-background-color: -wd-panel; -fx-background-radius: 3; -fx-border-color: -wd-line; -fx-border-radius: 3; -fx-padding: 12; }
+.section-title { -fx-font-family: "Consolas", "Menlo", monospace; -fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: -wd-muted; }
+
+/* result list and cards */
+.list-view { -fx-background-color: transparent; -fx-padding: 0; }
+.list-view:focused { -fx-background-color: transparent; }
+.list-cell, .list-cell:filled:hover, .list-cell:filled:selected, .list-cell:filled:selected:focused {
+    -fx-background-color: transparent;
+    -fx-padding: 4 0;
+}
+.card {
+    -fx-background-color: -wd-card;
+    -fx-background-radius: 3;
+    -fx-border-color: -wd-line;
+    -fx-border-radius: 3;
+    -fx-padding: 10 12;
+}
+.list-cell:filled:hover .card { -fx-background-color: -wd-card-hover; }
+.list-cell:filled:selected .card { -fx-background-color: -wd-card-sel; -fx-border-color: -wd-accent; -fx-border-width: 1.5; }
+.card-title { -fx-font-family: "Rockwell", "Georgia", serif; -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: -wd-title; }
+.card-meta { -fx-font-family: "Consolas", "Menlo", monospace; -fx-font-size: 11px; -fx-text-fill: -wd-muted; }
+.card-deal { -fx-font-size: 12px; -fx-text-fill: -wd-soft; }
+.badge-disc { -fx-stroke: -wd-ink; -fx-stroke-width: 1; }
+.glyph-light { -fx-fill: transparent; -fx-stroke: #fff7e6; -fx-stroke-width: 1.8; -fx-stroke-line-cap: round; -fx-stroke-line-join: round; }
+.glyph-fill-light { -fx-fill: #fff7e6; -fx-stroke: #fff7e6; -fx-stroke-width: 0.6; -fx-stroke-line-join: round; }
+
+/* badges: small stamps */
+.badge { -fx-background-radius: 2; -fx-padding: 2 8; -fx-font-family: "Consolas", "Menlo", monospace; -fx-font-size: 10px; -fx-font-weight: bold; }
+.badge-fresh, .badge-ai { -fx-background-color: -wd-ok-bg; -fx-text-fill: -wd-ok; }
+.badge-stale, .badge-warn { -fx-background-color: -wd-warn-bg; -fx-text-fill: -wd-warn; }
+.badge-unknown, .badge-mock { -fx-background-color: -wd-unk-bg; -fx-text-fill: -wd-unk; }
+.badge-near { -fx-background-color: -wd-near-bg; -fx-text-fill: -wd-near; }
+.badge-best { -fx-background-color: -wd-best-bg; -fx-text-fill: -wd-best; }
+
+/* text areas */
+.text-area {
+    -fx-background-color: -wd-line;
+    -fx-background-radius: 3;
+    -fx-background-insets: 0;
+    -fx-highlight-fill: -wd-accent;
+    -fx-highlight-text-fill: -wd-on-accent;
+    -fx-text-fill: -wd-text;
+}
+.text-area .content { -fx-background-color: -wd-field; -fx-background-radius: 2; -fx-background-insets: 1; }
+.text-area .viewport { -fx-background-color: transparent; }
+.details { -fx-font-family: "Consolas", "Menlo", monospace; -fx-font-size: 12px; }
+.chat { -fx-font-size: 13px; -fx-font-style: italic; }
+
+/* input */
+.text-field {
+    -fx-background-color: -wd-field;
+    -fx-background-radius: 3;
+    -fx-border-color: -wd-line;
+    -fx-border-radius: 3;
+    -fx-padding: 10 14;
+    -fx-text-fill: -wd-text;
+    -fx-prompt-text-fill: -wd-muted;
+}
+.text-field:focused { -fx-border-color: -wd-accent; }
+
+/* buttons: square, ruled, brochure-style */
+.button, .toggle-button {
+    -fx-background-color: -wd-btn;
+    -fx-background-radius: 3;
+    -fx-border-color: -wd-ink;
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+    -fx-text-fill: -wd-text;
+    -fx-font-family: "Consolas", "Menlo", monospace;
+    -fx-font-size: 12px;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.button:hover, .toggle-button:hover { -fx-background-color: -wd-btn-hover; }
+.button:disabled { -fx-opacity: 0.4; }
+.toggle-button { -fx-padding: 5 14; }
+.toggle-button:selected { -fx-background-color: -wd-ink; -fx-text-fill: -wd-panel; -fx-font-weight: bold; }
+.theme-button { -fx-background-color: transparent; -fx-text-fill: -wd-accent-hi; -fx-border-color: -wd-accent-hi; -fx-padding: 6 14; }
+.theme-button:hover { -fx-background-color: -wd-btn; }
+.button.primary { -fx-background-color: -wd-accent; -fx-border-color: -wd-accent; -fx-text-fill: -wd-on-accent; -fx-font-weight: bold; }
+.button.primary:hover { -fx-opacity: 0.88; }
+.button.danger { -fx-background-color: -wd-near-bg; -fx-text-fill: -wd-near; }
+
+/* map */
+.map-frame { -fx-background-color: -wd-ink; -fx-background-radius: 3; -fx-padding: 2; }
+.map-note { -fx-font-family: "Consolas", "Menlo", monospace; -fx-text-fill: -wd-accent-hi; -fx-font-size: 11px; }
+
+/* scrollbars */
+.scroll-bar { -fx-background-color: transparent; }
+.scroll-bar .track { -fx-background-color: transparent; -fx-border-color: transparent; }
+.scroll-bar .thumb { -fx-background-color: -wd-thumb; -fx-background-radius: 3; }
+.scroll-bar .increment-button, .scroll-bar .decrement-button { -fx-padding: 0; -fx-background-color: transparent; }
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow { -fx-shape: " "; -fx-padding: 0; }
+.scroll-pane, .scroll-pane .viewport { -fx-background-color: transparent; }
