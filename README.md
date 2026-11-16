@@ -59,7 +59,8 @@ cover and Quit closes the app.
 
 ### Screenshots
 
-| Cover (parchment) | Results and atlas (blueprint) |
+BluePrint Mode:
+| Cover | Results and atlas |
 |---|---|
 | ![Cover page](docs/screenshots/cover.png) | ![Results and atlas map](docs/screenshots/results.png) |
 
