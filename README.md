@@ -64,6 +64,11 @@ BluePrint Mode:
 |---|---|
 | ![Cover page](docs/screenshots/cover.png) | ![Results and atlas map](docs/screenshots/results.png) |
 
+Parchment Mode:
+| Cover | Results and atlas |
+|---|---|
+| ![Cover page](docs/screenshots/cover2.png) | ![Results and atlas map](docs/screenshots/results2.png) |
+
 ## Example usage
 
 ```
