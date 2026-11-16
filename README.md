@@ -5,7 +5,7 @@ A Java AI agent that finds Toronto restaurants and happy-hour deals from a plain
 follow-up questions and explains results; Java code does the filtering, ranking, freshness checks,
 history and map links, so recommendations only ever come from verified data.
 
-EECS3311 Fall 2026 project.
+EECS3311 Fall 2026 project, Stage 2 (implementation).
 
 ## Prerequisites
 
@@ -45,6 +45,24 @@ Graphical interface (JavaFX):
 mvn javafx:run
 ```
 
+## The GUI
+
+`mvn javafx:run` opens on a cover page (CN Tower skyline, "Enter the atlas"). Day is a parchment brochure and
+night is a blueprint; switch with the mode link on the cover or the button in the header. Home goes back to the
+cover and Quit closes the app.
+
+- Type a request in the box at the bottom. Result cards show an icon, distance, the deal and a FRESH / STALE /
+  UNKNOWN badge.
+- The atlas map shows one numbered pin per result. Click a pin to select it; click the selected pin again (or
+  press "Open in Google Maps") to open the venue in your browser.
+- "Explain why", "Refresh search", "New search" and "History" work on the selected result or search.
+
+### Screenshots
+
+| Cover (parchment) | Results and atlas (blueprint) |
+|---|---|
+| ![Cover page](docs/screenshots/cover.png) | ![Results and atlas map](docs/screenshots/results.png) |
+
 ## Example usage
 
 ```
@@ -52,7 +70,7 @@ mvn javafx:run
 Searching: near osgoode station, FRIDAY, 17:00-19:00, up to $15.0 pp, ...
 1. Example Pub (Pub) - 0.4 km - $6 pints, $5 wings
 > /explain 1          why this result was recommended
-> /map 1              OpenStreetMap link
+> /map 1              OpenStreetMap and Google Maps links
 > make it $20         refine the search in plain words
 > closest first       change the ranking
 > /history            saved searches (older than 7 days are marked outdated)
@@ -79,7 +97,8 @@ mvn test
 | `com.winedine.llm` | `LLMClient`, `OpenAILLMClient` (Adapter), `MockLLMClient` |
 | `com.winedine.agent` | `RestaurantAgent` - conversation logic |
 | `com.winedine.controller` | `AgentController` (Facade / MVC controller) |
-| `com.winedine.ui` | CLI, JavaFX GUI (`ui.gui`), result formatting, map links |
+| `com.winedine.ui` | CLI, result formatting, map links |
+| `com.winedine.ui.gui` | JavaFX GUI: `GuiApp`, `CoverView`, `AtlasMapView`, icons, fonts (stylesheet in `src/main/resources`) |
 
 ## Data
 
