@@ -58,6 +58,13 @@ public final class AppConfig {
         return new AppConfig(values);
     }
 
+    /** Returns a copy with some values replaced (used for command-line options). */
+    public AppConfig withOverrides(Map<String, String> overrides) {
+        Map<String, String> copy = new HashMap<>(values);
+        copy.putAll(overrides);
+        return new AppConfig(copy);
+    }
+
     /** Parses KEY=VALUE lines. Blank lines and lines starting with # are ignored. */
     static Map<String, String> parseLines(List<String> lines) {
         Map<String, String> result = new HashMap<>();

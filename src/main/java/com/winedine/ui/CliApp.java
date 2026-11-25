@@ -27,28 +27,45 @@ public class CliApp {
     private final AgentController controller;
     private final BufferedReader in;
     private final PrintStream out;
+    private final boolean batch;
 
     public CliApp(AgentController controller, BufferedReader in, PrintStream out) {
+        this(controller, in, out, false);
+    }
+
+    /**
+     * @param batch true when the lines come from a task file: each line is echoed after "&gt; ",
+     *              blank lines and lines starting with # are skipped, and the help text is not printed.
+     */
+    public CliApp(AgentController controller, BufferedReader in, PrintStream out, boolean batch) {
         this.controller = controller;
         this.in = in;
         this.out = out;
+        this.batch = batch;
     }
 
     public void run() throws IOException {
         out.println("Wine&Dine AI - Toronto happy-hour finder  (language model: " + controller.describeLlm() + ")");
-        out.println(HELP);
+        if (!batch) {
+            out.println(HELP);
+        }
         String line;
         while (true) {
-            out.print("\n> ");
-            out.flush();
+            if (!batch) {
+                out.print("\n> ");
+                out.flush();
+            }
             line = in.readLine();
             if (line == null || line.trim().equalsIgnoreCase("/quit")) {
                 out.println("Bye!");
                 return;
             }
             line = line.trim();
-            if (line.isEmpty()) {
+            if (line.isEmpty() || (batch && line.startsWith("#"))) {
                 continue;
+            }
+            if (batch) {
+                out.println("\n> " + line);
             }
             if (line.startsWith("/")) {
                 command(line);
