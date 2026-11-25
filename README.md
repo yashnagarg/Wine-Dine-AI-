@@ -5,7 +5,7 @@ A Java AI agent that finds Toronto restaurants and happy-hour deals from a plain
 follow-up questions and explains results; Java code does the filtering, ranking, freshness checks,
 history and map links, so recommendations only ever come from verified data.
 
-EECS3311 Fall 2026 project, Stage 2 (implementation).
+EECS3311 Fall 2026 project.
 
 ## Prerequisites
 
@@ -45,6 +45,46 @@ Graphical interface (JavaFX):
 mvn javafx:run
 ```
 
+## Standalone CLI (`Agent.jar`)
+
+Build the jar once (see `pom-additions.md` for the shade plugin):
+
+```bash
+mvn -DskipTests package
+```
+
+Then run the agent on a task file from the project folder (it reads `data/restaurants.json` and `.env`):
+
+```bash
+java -jar target/Agent.jar -LLMAPI -input examples/task.txt
+```
+
+Each line of the task file is one message or command, exactly as you would type it in the interactive CLI
+(blank lines and lines starting with `#` are ignored). The agent prints every line it reads after `>` followed by
+its answer, then exits.
+
+| Option | Meaning |
+|---|---|
+| `-input FILE` | Run on a task file. Without it the CLI is interactive (or reads standard input). |
+| `-output FILE` | Write the results to a file instead of the terminal. |
+| `-LLMAPI` | Use the real LLM API. Needs `LLM_API_KEY` in `.env` or the environment; stops with an error if there is none. |
+| `-mock` | Use the offline mock model (no key; simple phrasing only). |
+| `-model NAME` | LLM model name (default `gpt-4o-mini`). |
+| `-dataset FILE` | Restaurant dataset (default `data/restaurants.json`). |
+| `-history FILE` | Search history file (default `data/history.json`). |
+| `-help` | Show the options. |
+
+Without `-LLMAPI` or `-mock`, the agent uses the API if a key is configured and the mock otherwise.
+Exit codes: `0` ok, `1` could not start (for example the dataset is missing), `2` bad options.
+
+More examples:
+
+```bash
+java -jar target/Agent.jar -mock -input examples/task.txt -output results.txt   # offline, saved to a file
+java -jar target/Agent.jar -LLMAPI                                              # interactive with the real model
+java -jar target/Agent.jar -help
+```
+
 ## The GUI
 
 `mvn javafx:run` opens on a cover page (CN Tower skyline, "Enter the atlas"). Day is a parchment brochure and
@@ -68,6 +108,7 @@ Parchment Mode:
 | Cover | Results and atlas |
 |---|---|
 | ![Cover page](docs/screenshots/cover2.png) | ![Results and atlas map](docs/screenshots/results2.png) |
+
 
 ## Example usage
 
