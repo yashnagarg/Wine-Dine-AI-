@@ -1,0 +1,8 @@
+# Example task file for the standalone CLI.
+# One message or command per line. Blank lines and lines starting with # are ignored.
+cheap beer and wings near Osgoode Station on Friday 5-7pm under $15
+/explain 1
+/map 1
+make it $10
+closest first
+/history
